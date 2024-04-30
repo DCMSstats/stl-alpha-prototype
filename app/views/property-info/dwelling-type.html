@@ -10,14 +10,47 @@
       short-term rental?
     </h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
-      <p>
-        [Insert question content here - see the
-        <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        for examples]
-      </p>
 
-      {{ govukButton({ text: "Continue" }) }}
+    <form class="form" action="/path/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="dwelling-size"
+                name="dwelling-size"
+                type="radio"
+                value="entire-dwelling"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="dwelling-size"
+              >
+                I am registering the entire dwelling as a short-term rental
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="dwelling-size-2"
+                name="dwelling-size"
+                type="radio"
+                value="part-dwelling"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="dwelling-size-2"
+              >
+                I am only registering part of a dwelling as a short-term rental (for example, a room)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({ text: "Continue", href:"/property-info/accomodation-type"})
+      }}
     </form>
   </div>
 </div>
