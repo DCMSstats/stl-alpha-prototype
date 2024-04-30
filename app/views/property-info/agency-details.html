@@ -21,15 +21,81 @@
       </h1>
 
       <form class="form" action="/path/of/next/page" method="post">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="agency-name">
+              Name of management agency
+            </label>
+            <input
+              class="govuk-input"
+              id="agency-name"
+              name="agency-details"
+              type="text"
+            />
+          </div>
+  
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="agent-name">Name of agent</label>
+            <input
+              class="govuk-input"
+              id="agent-name"
+              name="agency-details"
+              type="text"
+            />
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="agency-email">Contact email address</label>
+            <input
+              class="govuk-input"
+              id="agency-email"
+              name="agency-details"
+              type="email"
+              spellcheck="false"
+              aria-describedby="email-hint"
+              autocomplete="email"
+            />
+          </div>
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="agency-telephone">Contact telephone number</label>
+            <input
+              class="govuk-input"
+              id="agency-telephone-number"
+              name="agency-details"
+              type="tel"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="agency-address">
+              Correspondence address
+            </label>
+            <input
+              class="govuk-input"
+              id="agency-address"
+              name="agency-details"
+              type="text"
+            />
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="agency-postcode">
+              Postcode
+            </label>
+            <input
+              class="govuk-input"
+              id="agency-postcode"
+              name="agency-details"
+              type="text"
+            />
+          </div>
+
+        </fieldset>
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue", href:"/property-info/summary-page"
         }) }}
 
       </form>
