@@ -13,6 +13,6 @@ router.post('/renewal', function(request, response) {
     if (existing_type == "no"){
         response.redirect("/personal-info/operating-model")
     } else {
-        response.redirect("/personal-info/registration-number")
+        response.redirect("/existing-lookup/registration-number")
     }
 })
