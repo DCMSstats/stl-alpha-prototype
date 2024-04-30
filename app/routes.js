@@ -24,3 +24,12 @@ router.post("/different-address", function (request, response) {
     response.redirect("/property-info/find-address");
   }
 });
+
+router.post("/managed", function (request, response) {
+  var management_type = request.session.data["managed"];
+  if (management_type == "agency") {
+    response.redirect("/property-info/agency-details");
+  } else {
+    response.redirect("/property-info/summary-page");
+  }
+});
