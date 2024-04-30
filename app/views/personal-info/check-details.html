@@ -1,98 +1,35 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Check your answers
+template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %} {{ govukBackLink({ text: "Back", href:
+"javascript:window.history.back()" }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">Check your details</h1>
 
-{% block pageTitle %}
-  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+    {{ govukSummaryList({ classes: "govuk-!-margin-bottom-9", rows: [ { key: {
+    text: "Name" }, value: { text: "Sarah Philips" }, actions: { items: [ {
+    href: "/personal-info/name", text: "Change", visuallyHiddenText: "name" } ]
+    } }, { key: { text: "Date of birth" }, value: { text: "5 January 1978" },
+    actions: { items: [ { href: "/personal-info/dob", text: "Change",
+    visuallyHiddenText: "date of birth" } ] } }, { key: { text: "Address" },
+    value: { html: "72 Guild Street<br />London<br />SE23 6FH" }, actions: {
+    items: [ { href: "/personal-info/home-address", text: "Change",
+    visuallyHiddenText: "address" } ] } }, { key: { text: "Contact details" },
+    value: { html: '
+    <p class="govuk-body">07700 900457</p>
+    <p class="govuk-body">sarah.phillips@example.com</p>
+    ' }, actions: { items: [ { href: "/personal-info/email", text: "Change",
+    visuallyHiddenText: "contact details" } ] } } ] }) }}
+    <h2 class="govuk-heading-m">Now send your application</h2>
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }}
-{% endblock %}
+    <p>
+      By submitting this application you are confirming that, to the best of
+      your knowledge, the details you are providing are correct.
+    </p>
 
-{% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-
-      <h1 class="govuk-heading-xl">
-        Check your answers before sending your application
-      </h1>
-
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Question 1"
-            },
-            value: {
-              text: "Answer 1"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 2"
-            },
-            value: {
-              text: "Answer 2"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 3"
-            },
-            value: {
-              text: "Answer 3"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-m">
-        Now send your application
-      </h2>
-
-      <p>
-        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
-      </p>
-
-      <form action="/confirmation" method="post" novalidate>
-
-        {{ govukButton({
-          text: "Continue", href:"/property-info/info"
-        }) }}
-
-      </form>
-
-    </div>
+    <form action="/confirmation" method="post" novalidate>
+      {{ govukButton({ text: "Continue", href:"/property-info/info" }) }}
+    </form>
   </div>
+</div>
 {% endblock %}
