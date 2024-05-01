@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Add proof of compliance for each of the properties that you are operating
+      as a short-term rental
+    </h1>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a
+            class="govuk-link govuk-task-list__link"
+            href="#"
+            aria-describedby="before-you-start-1-status"
+          >
+            Address 1, Road, Town, Postcode
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="before-you-start-1-status">
+          <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a
+            class="govuk-link govuk-task-list__link"
+            href="#"
+            aria-describedby="before-you-start-2-status"
+          >
+            Address 2, Road, Town, Postcode
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="before-you-start-2-status">
+          <strong class="govuk-tag govuk-tag--grey"> Not started </strong>
+        </div>
+      </li>
+    </ul>
+
+    {{ govukButton({ text: "Continue", href: "/compliance-info/declaration" })
+    }}
+  </div>
+</div>
+
+{% endblock %}
