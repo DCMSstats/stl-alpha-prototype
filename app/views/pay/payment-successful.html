@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Your payment was successful",
+        html: " "
+      }) }}
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing..
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Lorem ipsum dolor.
+      </h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem dolor, tempus sed felis in.
+      </p>
+
+
+            {{ govukButton({ text: "Continue", href:"/summary/confirmation-screen"})
+      }}
+
+
+    </div>
+  </div>
+
+{% endblock %}
