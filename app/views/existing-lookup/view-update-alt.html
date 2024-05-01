@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Check your answers
+template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %} {{ govukBackLink({ text: "Back", href:
+"javascript:window.history.back()" }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">
+      View or update information about your short-term rental
+    </h1>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Property address</th>
+          <th scope="col" class="govuk-table__header">Type of accomodation</th>
+          <th scope="col" class="govuk-table__header">Full/part dwelling</th>
+          <th scope="col" class="govuk-table__header">Date of renewal</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__header">
+            123 Canterbury avenue SW13 1EB
+          </td>
+          <td class="govuk-table__cell">Flat</td>
+          <td class="govuk-table__cell">Full</td>
+          <td class="govuk-table__cell">1st May 2025</td>
+          <td class="govuk-table__cell">View | Update</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__header">123 Hill lane SW13</td>
+          <td class="govuk-table__cell">Flat</td>
+          <td class="govuk-table__cell">Full</td>
+          <td class="govuk-table__cell">1st May 2025</td>
+          <td class="govuk-table__cell">View | Update</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__header">123 Hill lane SW13</td>
+          <td class="govuk-table__cell">Flat</td>
+          <td class="govuk-table__cell">Full</td>
+          <td class="govuk-table__cell">1st May 2025</td>
+          <td class="govuk-table__cell">View | Update</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="govuk-heading-m">Now send your application</h2>
+
+    <p>
+      By submitting this application you are confirming that, to the best of
+      your knowledge, the details you are providing are correct.
+    </p>
+
+    <form action="/confirmation" method="post" novalidate>
+      {{ govukButton({ text: "Accept and send" }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

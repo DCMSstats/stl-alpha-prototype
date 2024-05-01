@@ -1,72 +1,69 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Payment Summary</h1>
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
+    <form class="form" action="/path/of/next/page" method="post">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">Enter card details</h1>
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="card-number"> Card number </label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="card-number"
+            name="payment-details"
+            type="text"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="expiry"> Expiry date </label>
+          <input
+            class="govuk-input govuk-input--width-2"
+            id="expiry"
+            name="payment-details"
+            type="text"
+            autocomplete="address-line2"
+          />
+          <input
+            class="govuk-input govuk-input--width-2"
+            id="expiry-2"
+            name="payment-details"
+            type="text"
+            autocomplete="expiry-2"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town"> Name on card </label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="card-name"
+            name="payment-details"
+            type="text"
+            autocomplete="card-name"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            Security code
+          </label>
+          <input
+            class="govuk-input govuk-input--width-4"
+            id="security-code"
+            name="payment-details"
+            type="text"
+          />
+        </div>
+      </fieldset>
 
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        Payment Summary
-      </h1>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">
-      Enter card details
-    </h1>
-  </legend>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-1">
-      Card number
-    </label>
-    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+      {{ govukButton({ text: "Continue" , href:"/pay/check-your-details" }) }}
+    </form>
   </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-2">
-     Expiry date
-    </label>
-    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-town">
-      Name on card
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-county">
-      Security code
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
-  </div>
-</fieldset>
-
-        {{ govukButton({
-          text: "Continue" , href:"/pay/check-your-details"
-        }) }}
-
-      </form>
-
-    </div>
-  </div>
+</div>
 
 {% endblock %}
