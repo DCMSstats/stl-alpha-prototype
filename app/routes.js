@@ -25,3 +25,12 @@ router.post("/managed", function (request, response) {
     response.redirect("/compliance-info/certificates");
   }
 });
+
+router.post("/dwelling-size", function (request, response) {
+  var dwelling_type = request.session.data["dwelling-size"];
+  if (dwelling_type == "part") {
+    response.redirect("/property-info/bedroom-let");
+  } else {
+    response.redirect("/property-info/bedroom-count");
+  }
+});

@@ -11,17 +11,17 @@
     </h1>
 
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/dwelling-size" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input
                 class="govuk-radios__input"
-                id="dwelling-size"
-                name="dwelling-size"
+                id="dwelling-type"
+                name="dwelling-type"
                 type="radio"
-                value="entire-dwelling"
+                value="full"
               />
               <label
                 class="govuk-label govuk-radios__label"
@@ -33,14 +33,14 @@
             <div class="govuk-radios__item">
               <input
                 class="govuk-radios__input"
-                id="dwelling-size-2"
-                name="dwelling-size"
+                id="dwelling-type-2"
+                name="dwelling-type"
                 type="radio"
-                value="part-dwelling"
+                value="part"
               />
               <label
                 class="govuk-label govuk-radios__label"
-                for="dwelling-size-2"
+                for="dwelling-type-2"
               >
                 I am only registering part of a dwelling as a short-term rental (for example, a room)
               </label>
@@ -49,7 +49,7 @@
         </fieldset>
       </div>
 
-      {{ govukButton({ text: "Continue", href:"/property-info/usage-type"})
+      {{ govukButton({ text: "Continue"})
       }}
     </form>
   </div>
