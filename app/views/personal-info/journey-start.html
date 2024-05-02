@@ -6,50 +6,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      Are you renewing or updating an existing registration?
+     Apply online to register a new property as a short term let in England
     </h1>
 
-    <form class="form" action="/renewal" method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="renewingOrUpdating"
-                name="renewingOrUpdating"
-                type="radio"
-                value="yes"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="renewingOrUpdating"
-              >
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="renewingOrUpdating-2"
-                name="renewingOrUpdating"
-                type="radio"
-                value="no"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="renewingOrUpdating-2"
-              >
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+    <h2 class="govuk-heading-l">
+     Before you start
+    </h2>
 
-      {{ govukButton({ text: "Start Now", href:"/personal-info/name" }) }}
-    </form>
+    <p>  including what they need to be able to complete the whole service (“Before you start”) i.e. owners D.O.B, gas safety cert</p>
+    
+    <h2 class="govuk-heading-l">
+     Cost
+    </h2>
+    <p> xxx </p>
+
+ 
+{{ govukButton({ text: "Start Now", href:"/personal-info/name", isStartButton:true }) }}
+ <p> <strong> If you already have an existing registration? </strong></p>
+ <a href="http://localhost:3000/existing-lookup/registration-number"> Renew/update an existing property registration</a>
   </div>
+ 
 </div>
 
 {% endblock %}
