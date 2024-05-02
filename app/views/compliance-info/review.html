@@ -22,7 +22,8 @@ beforeContent %} {{ govukBackLink({ text: "Back", href:
     </p>
 
     <form action="/confirmation" method="post" novalidate>
-      {{ govukButton({ text: "Continue" }) }}
+      {{ govukButton({ text: "Continue",
+      href:"/property-info/add-another-dwelling" }) }}
     </form>
   </div>
 </div>
