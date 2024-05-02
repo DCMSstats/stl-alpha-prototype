@@ -1,47 +1,29 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Do you need to register another dwelling or premise?
+    </h1>
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
+    <form class="form" action="/path/of/next/page" method="post">
+      <p>
+        If you wish to, you can register another dwelling within this same
+        application.
+      </p>
 
-{% block content %}
+      {{ govukButton({ text: "Add another dwelling", classes:
+      "govuk-button--secondary", href:"/property-info/home-address-confirmation"
+      }) }}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+      <p>If not, continue to the next section.</p>
 
-      <h1 class="govuk-heading-l">
-        Do you need to register another dwelling or premise?
-      </h1>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
-        <p>
-          If you wish to, you can register more than one dwelling at the same time.
-        </p>
-
-
-        {{ govukButton({
-          text: "Add another dwelling", classes: "govuk-button--secondary", href:"/property-info/home-address-confirmation"
-        }) }}
-
-        <p>
-          If not, continue to the next section.
-        </p>
-
-        {{ govukButton({
-          text: "Continue", href: "/compliance-info/info"
-        }) }}
-
-      </form>
-
-    </div>
+      {{ govukButton({ text: "Continue", href: "/compliance-info/info" }) }}
+    </form>
   </div>
+</div>
 
 {% endblock %}
