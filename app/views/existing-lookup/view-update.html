@@ -3,46 +3,72 @@ template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
 beforeContent %} {{ govukBackLink({ text: "Back", href:
 "javascript:window.history.back()" }) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       View or update information about your short-term rental
     </h1>
 
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Property address</th>
-          <th scope="col" class="govuk-table__header">Date of renewal</th>
-          <th scope="col" class="govuk-table__header"></th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">123 Hill lane SW13</td>
-          <td class="govuk-table__cell">1st May 2025</td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link" href="#">View</a> |
-            <a class="govuk-link" href="#">Update</a>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">124 Hill lane SW13</td>
-          <td class="govuk-table__cell">1st May 2025</td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link" href="#">View</a> |
-            <a class="govuk-link" href="#">Update</a>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">125 Hill lane SW13</td>
-          <td class="govuk-table__cell">Flat</td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link" href="#">View</a> |
-            <a class="govuk-link" href="#">Update</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Property address</dt>
+        <dt class="govuk-summary-list__key">Date of renewal</dt>
+        <dt class="govuk-summary-list__key"></dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">123 Hill lane SW13</dt>
+        <dd class="govuk-summary-list__value">1st May 2025</dd>
+        <dd class="govuk-summary-list__actions">
+          <ul class="govuk-summary-list__actions-list">
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >View<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >Update<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+          </ul>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">124 Hill lane SW13</dt>
+        <dd class="govuk-summary-list__value">1st May 2025</dd>
+        <dd class="govuk-summary-list__actions">
+          <ul class="govuk-summary-list__actions-list">
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >View<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >Update<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+          </ul>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">125 Hill lane SW13</dt>
+        <dd class="govuk-summary-list__value">1st May 2025</dd>
+        <dd class="govuk-summary-list__actions">
+          <ul class="govuk-summary-list__actions-list">
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >View<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#"
+                >Update<span class="govuk-visually-hidden"> address</span></a
+              >
+            </li>
+          </ul>
+        </dd>
+      </div>
+    </dl>
   </div>
 </div>
 {% endblock %}

@@ -11,7 +11,7 @@ const router = govukPrototypeKit.requests.setupRouter();
 router.post("/different-address", function (request, response) {
   var address_type = request.session.data["sameAddress"];
   if (address_type == "sameAddress") {
-    response.redirect("/property-info/dwelling-type");
+    response.redirect("/property-info/accomodation-type");
   } else {
     response.redirect("/property-info/find-address");
   }
