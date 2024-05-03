@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Upload your certificates
+      </h1>
+
+      <p>
+        Each document must be smaller than 6MB.
+      </p>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">Types of file you can upload</span>
+        </summary>
+        <div class="govuk-details__text">
+          jpg, png, pdf etc...
+        </div>
+      </details>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="gas-upload">
+          Gas safety certificate
+        </label>
+        <input class="govuk-file-upload" id="gas-upload" name="gasUpload" type="file">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="boiler-upload">
+          Boiler safety certificate
+        </label>
+        <input class="govuk-file-upload" id="boiler-upload" name="boilerUpload" type="file">
+      </div>
+
+
+      {{ govukButton({
+        text: "Continue", href: "/compliance-info/fire-safety"
+      }) }}
+
+      {{ govukButton({ text: "Save as draft", classes:
+      "govuk-button--secondary"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
