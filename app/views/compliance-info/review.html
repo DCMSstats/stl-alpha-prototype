@@ -40,15 +40,78 @@ beforeContent %} {{ govukBackLink({ text: "Back", href:
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
         </dd>
       </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Management agency
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Agency details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Hiltonz</p>
+          <p>John Doe</p>
+          <p>john.doe@example.com</p>
+          <p>01234 567891</p>
+          <p>123 Rag Lane SW15 2SR</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Gas safety certificate
+        </dt>
+        <dd class="govuk-summary-list__value">
+          gas_certificate.jpg
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Boiler safety certificate
+        </dt>
+        <dd class="govuk-summary-list__value">
+          boiler_certificate.jpg
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Electrical safety certificate
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not applicable
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Fire safety regulation met
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
       
     </dl>
-
-    <h2 class="govuk-heading-m">Now send your application</h2>
-
-    <p>
-      By submitting this application you are confirming that, to the best of
-      your knowledge, the details you are providing are correct.
-    </p>
 
     <form action="/confirmation" method="post" novalidate>
       {{ govukButton({ text: "Continue",
