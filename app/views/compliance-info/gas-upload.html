@@ -17,7 +17,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Upload your certificates
+        Upload your Gas safety certificate
       </h1>
 
       <p>
@@ -39,19 +39,12 @@
         </label>
         <input class="govuk-file-upload" id="gas-upload" name="gasUpload" type="file">
       </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="boiler-upload">
-          Boiler safety certificate
-        </label>
-        <input class="govuk-file-upload" id="boiler-upload" name="boilerUpload" type="file">
-      </div>
-
 
       {{ govukButton({
-        text: "Continue", href: "/compliance-info/fire-safety"
+        text: "Continue", href: "/compliance-info/boiler-upload"
       }) }}
 
-      {{ govukButton({ text: "Save as draft", classes:
+      {{ govukButton({ text: "Upload later", href: "/compliance-info/boiler-upload", classes:
       "govuk-button--secondary"
       }) }}
 
