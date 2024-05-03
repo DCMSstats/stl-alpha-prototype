@@ -11,24 +11,45 @@
 
       {{ govukPanel({
         titleText: "Your payment was successful",
-        html: " "
+        html: "HDJ2123F "
       }) }}
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing..
-      </p>
+
 
       <h2 class="govuk-heading-m">
-        Lorem ipsum dolor.
+        What happens next
       </h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In.
+        We have sent you a confirmation email
       </p>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem dolor, tempus sed felis in.
-      </p>
+      <h2 class="govuk-heading-m">
+        Payment summary
+      </h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Payment for:
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2 Short term let registrations
+          </dd>
+      
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total:
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £90
+          </dd>
+      
+        </div>
+        
+      
+      </dl>
 
 
             {{ govukButton({ text: "Continue", href:"/summary/confirmation-screen"})
