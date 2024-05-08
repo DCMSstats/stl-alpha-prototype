@@ -10,19 +10,61 @@
     <form class="form" action="/path/of/next/page" method="post">
       <fieldset class="govuk-fieldset">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="houseNameOrNumber">
-            House name or number
+          <label class="govuk-label" for="addressLine1">
+            Address line 1
           </label>
           <input
             class="govuk-input"
-            id="houseNameOrNumber"
-            name="houseNameOrNumber"
+            id="addressLine1"
+            name="addressLine1"
             type="text"
-            autocomplete="houseNameOrNumber"
-            value="2"
-
+            autocomplete="addressLine1"
+            value="2 Logg way"
           />
         </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="addressLine2">
+            Address line 2 (optional)
+          </label>
+          <input
+            class="govuk-input"
+            id="addressLine2"
+            name="addressLine2"
+            type="text"
+            autocomplete="addressLine2"
+            value=""
+          />
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="townOrCity">
+            Town or city
+          </label>
+          <input
+            class="govuk-input"
+            id="townOrCity"
+            name="townOrCity"
+            type="text"
+            autocomplete="townOrCity"
+            value="Birmingham"
+          />
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="county">
+            County (optional)
+          </label>
+          <input
+            class="govuk-input"
+            id="county"
+            name="county"
+            type="text"
+            autocomplete="county"
+            value=""
+          />
+        </div>
+
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-postcode"> Postcode </label>
@@ -37,7 +79,7 @@
         </div>
       </fieldset>
 
-      {{ govukButton({ text: "Continue", href:"/personal-info/address-selection"
+      {{ govukButton({ text: "Continue", href:"/personal-info/check-details"
       }) }}
     </form>
     <details class="govuk-details">
