@@ -17,10 +17,12 @@ beforeContent %} {{ govukBackLink({ text: "Back", href:
     ] } }, { key: { text: "Address" }, value: { html: "2 Logg Way
     <br />Birmingham<br />BG13 1HN" }, actions: { items: [ { href:
     "/personal-info/home-address", text: "Change", visuallyHiddenText: "address"
-    } ] } }, { key: { text: "Contact details" }, value: { html: '
-    <p class="govuk-body">07700 900457</p>
+    } ] } }, { key: { text: "Email" }, value: { html: '
     <p class="govuk-body">sarah.phillips@example.com</p>
     ' }, actions: { items: [ { href: "/personal-info/email", text: "Change",
+    visuallyHiddenText: "contact details" } ] } }, { key: { text: "Phone number" }, value: { html: '
+    <p class="govuk-body">07700 900457</p>
+    ' }, actions: { items: [ { href: "/personal-info/phone-number", text: "Change",
     visuallyHiddenText: "contact details" } ] } } ] }) }}
 
     <form action="/confirmation" method="post" novalidate>
