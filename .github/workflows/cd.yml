@@ -9,4 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-  
+      - name: Add Heroku remote
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku git:remote -a ${{ secrets.APP_NAME }}
+      - name: Push to Heroku
+        run: git push heroku main
