@@ -13,5 +13,14 @@ jobs:
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: heroku git:remote -a ${{ secrets.APP_NAME }}
+      - name: Create netrc file
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_USER: ${{ secrets.HEROKU_USER }}
+        run: cat >~/.netrc <<EOF
+          machine git.heroku.com
+              login ${HEROKU_USER}
+              password ${HEROKU_API_KEY}
+          EOF
       - name: Push to Heroku
         run: git push heroku main
