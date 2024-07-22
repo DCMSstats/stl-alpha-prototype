@@ -24,4 +24,6 @@ jobs:
               password ${HEROKU_API_KEY}
           EOF
       - name: Push to Heroku
-        run: git push heroku main --force
+        run: |
+          git fetch --prune --unshallow
+          git push heroku main --force
