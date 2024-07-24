@@ -1,5 +1,6 @@
 Setup to run the kit
 ====================
+test
 
 To run the kit, you will need:
 - A code editor (like VSCode)
