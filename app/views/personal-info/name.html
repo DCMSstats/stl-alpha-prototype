@@ -28,7 +28,7 @@
     </div>
     <h1 class="govuk-heading-l">What is your name?</h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/personal-info/dob" method="post">
       <fieldset class="govuk-fieldset">
         <div class="govuk-form-group">
           <label class="govuk-label" for="title"> Title </label>
@@ -38,7 +38,7 @@
             name="title"
             type="text"
             autocomplete="title"
-            value="Miss"
+            value="{{ data['title'] }}"
           />
         </div>
         <div class="govuk-form-group">
@@ -46,26 +46,26 @@
           <input
             class="govuk-input govuk-input--width-20"
             id="first-name"
-            name="firstname"
+            name="first-name"
             type="text"
             autocomplete="first-name"
-            value="Sarah"
+            value="{{ data['first-name'] }}"
           />
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="surname"> Last name </label>
+          <label class="govuk-label" for="last-name"> Last name </label>
           <input
             class="govuk-input govuk-input--width-20"
-            id="lastName"
-            name="lastName"
+            id="last-name"
+            name="last-name"
             type="text"
             autocomplete="lastName"
-            value="Phillips"
+            value="{{ data['last-name'] }}"
           />
         </div>
       </fieldset>
 
-      {{ govukButton({ text: "Continue", href:"/personal-info/dob" }) }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>

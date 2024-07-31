@@ -7,7 +7,7 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">What is your email address?</h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/personal-info/phone-number" method="post">
       <div class="govuk-form-group">
         <input
           class="govuk-input"
@@ -17,12 +17,11 @@
           spellcheck="false"
           aria-describedby="email-hint"
           autocomplete="email"
-          value="sarah.phillips@example.com"
+          value="{{data['email']}}"
         />
       </div>
 
-      {{ govukButton({ text: "Continue", href:"/personal-info/phone-number" })
-      }}
+      {{ govukButton({ text: "Continue" })}}
     </form>
     <details class="govuk-details">
       <summary class="govuk-details__summary">

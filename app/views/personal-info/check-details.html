@@ -20,10 +20,11 @@ beforeContent %} {{ govukBackLink({ text: "Back", href:
     } ] } }, { key: { text: "Email" }, value: { html: '
     <p class="govuk-body">sarah.phillips@example.com</p>
     ' }, actions: { items: [ { href: "/personal-info/email", text: "Change",
-    visuallyHiddenText: "contact details" } ] } }, { key: { text: "Phone number" }, value: { html: '
+    visuallyHiddenText: "contact details" } ] } }, { key: { text: "Phone number"
+    }, value: { html: '
     <p class="govuk-body">07700 900457</p>
-    ' }, actions: { items: [ { href: "/personal-info/phone-number", text: "Change",
-    visuallyHiddenText: "contact details" } ] } } ] }) }}
+    ' }, actions: { items: [ { href: "/personal-info/phone-number", text:
+    "Change", visuallyHiddenText: "contact details" } ] } } ] }) }}
 
     <form action="/confirmation" method="post" novalidate>
       {{ govukButton({ text: "Accept and continue",

@@ -6,11 +6,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      What is the maximum number of guests that the property can accomodate
-          at one time?
+      What is the maximum number of guests that the property can accomodate at
+      one time?
     </h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/property-info/managed" method="post">
       <div class="govuk-form-group">
         <select class="govuk-select" id="guests" name="guests">
           <option value="no-guests"></option>
@@ -21,7 +21,7 @@
         </select>
       </div>
 
-      {{ govukButton({ text: "Continue", href:"/property-info/managed" }) }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>

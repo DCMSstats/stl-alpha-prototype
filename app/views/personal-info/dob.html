@@ -7,7 +7,7 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">What is your date of birth?</h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/personal-info/email" method="post">
       <div class="govuk-form-group">
         <fieldset
           class="govuk-fieldset"
@@ -31,7 +31,7 @@
                   type="text"
                   autocomplete="bday-day"
                   inputmode="numeric"
-                  value="05"
+                  value="{{data['dob-day']}}"
                 />
               </div>
             </div>
@@ -50,7 +50,7 @@
                   type="text"
                   autocomplete="bday-month"
                   inputmode="numeric"
-                  value="01"
+                  value="{{data['dob-month']}}"
                 />
               </div>
             </div>
@@ -69,14 +69,14 @@
                   type="text"
                   autocomplete="bday-year"
                   inputmode="numeric"
-                  value="1978"
+                  value="{{data['dob-year']}}"
                 />
               </div>
             </div>
           </div>
         </fieldset>
       </div>
-      {{ govukButton({ text: "Continue", href:"/personal-info/email" }) }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
     <details class="govuk-details">
       <summary class="govuk-details__summary">

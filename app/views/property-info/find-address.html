@@ -10,61 +10,57 @@
       short-term rental?
     </h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/property-info/accomodation-type" method="post">
       <fieldset class="govuk-fieldset">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="addressLine1">
+          <label class="govuk-label" for="address-line-1">
             Address line 1
           </label>
           <input
             class="govuk-input"
-            id="addressLine1"
-            name="addressLine1"
+            id="address-line-1"
+            name="address-line-1"
             type="text"
-            autocomplete="addressLine1"
-            value="123 Hill lane"
+            autocomplete="address-line-1"
+            value="{{ data['address-line-1'] }}"
           />
         </div>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="addressLine2">
+          <label class="govuk-label" for="address-line-2">
             Address line 2 (optional)
           </label>
           <input
             class="govuk-input"
-            id="addressLine2"
-            name="addressLine2"
+            id="address-line-2"
+            name="address-line-2"
             type="text"
-            autocomplete="addressLine2"
-            value=""
+            autocomplete="address-line-2"
+            value="{{ data['address-line-2'] }}"
           />
         </div>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="townOrCity">
-            Town or city
-          </label>
+          <label class="govuk-label" for="town-or-city"> Town or city </label>
           <input
             class="govuk-input"
-            id="townOrCity"
-            name="townOrCity"
+            id="town-or-city"
+            name="town-or-city"
             type="text"
-            autocomplete="townOrCity"
-            value="London"
+            autocomplete="town-or-city"
+            value="{{ data['town-or-city'] }}"
           />
         </div>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="county">
-            County (optional)
-          </label>
+          <label class="govuk-label" for="county"> County (optional) </label>
           <input
             class="govuk-input"
             id="county"
             name="county"
             type="text"
             autocomplete="county"
-            value=""
+            value="{{ data['county'] }}"
           />
         </div>
 
@@ -73,16 +69,15 @@
           <input
             class="govuk-input govuk-input--width-10"
             id="address-postcode"
-            name="addressPostcode"
+            name="address-postcode"
             type="text"
             autocomplete="postal-code"
-            value="SW13 4AE"
+            value="{{ data['address-postcode'] }}"
           />
         </div>
       </fieldset>
 
-      {{ govukButton({ text: "Continue", href:"/property-info/accomodation-type" })
-      }}
+      {{ govukButton({ text: "Continue"}) }}
     </form>
   </div>
 </div>

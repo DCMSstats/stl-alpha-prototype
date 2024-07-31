@@ -7,7 +7,11 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">Do you need to register another dwelling?</h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form
+      class="form"
+      action="/compliance-info/review-applications"
+      method="post"
+    >
       <p>
         If you wish to, you can register another dwelling within this same
         application.
@@ -18,8 +22,7 @@
 
       <p>If not, continue to the next section.</p>
 
-      {{ govukButton({ text: "Continue", href:
-      "/compliance-info/review-applications" }) }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>

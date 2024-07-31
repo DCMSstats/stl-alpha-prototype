@@ -19,10 +19,10 @@
       <h1 class="govuk-heading-l">
         Which certifications do you have for this property
       </h1>
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/compliance-info/gas-upload" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
-        <div class="govuk-inset-text">123</br>Hill Lane</br>London</br>SW13 4AE</div>
+        <div class="govuk-inset-text">{{ data['address-line-1'] }}<br>{{ data['town-or-city']}}<br>{{ data['address-postcode'] }}</div>
 
         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
@@ -83,7 +83,7 @@
     </div>
 
         {{ govukButton({
-          text: "Continue", href: "/compliance-info/gas-upload"
+          text: "Continue"
         }) }}
 
       </form>
