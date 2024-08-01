@@ -1,25 +1,28 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">How many bedrooms are being let out?</h1>
-
-    <form class="form" action="/property-info/guest-count" method="post">
-      <div class="govuk-form-group">
-        <select class="govuk-select" id="lets" name="lets">
-          <option value="no-lets"></option>
-          <option value="one-let">1</option>
-          <option value="two-lets">2</option>
-          <option value="three-lets">3</option>
-        </select>
-      </div>
-
-      {{ govukButton({ text: "Continue" }) }}
-    </form>
-  </div>
-</div>
-
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">How many bedrooms are being let out?</h1>
+            <form class="form" action="/property-info/guest-count" method="post">
+                <div class="govuk-form-group">
+                    <select class="govuk-select" id="lets" name="lets">
+                        <option value="no-lets"></option>
+                        <option value="one-let">1</option>
+                        <option value="two-lets">2</option>
+                        <option value="three-lets">3</option>
+                    </select>
+                </div>
+                {{ govukButton({"text": "Continue"}) }}
+            </form>
+        </div>
+    </div>
 {% endblock %}

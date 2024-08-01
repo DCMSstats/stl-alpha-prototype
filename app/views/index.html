@@ -1,195 +1,137 @@
-{% extends "layouts/main.html" %} {% set pageName="Home" %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
-
-    <!-- <h1 class="govuk-heading-l">
+{% extends "layouts/main.html" %} {% set pageName = "Home" %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+            <!-- <h1 class="govuk-heading-l">
       {{ serviceName }} - Full individual operator flow
     </h1>
-    <a
-      href="/personal-info/journey-start.html"
-      role="button"
-      draggable="false"
-      class="govuk-button govuk-button--start"
-      data-module="govuk-button"
-    >
+    <a href="/personal-info/journey-start.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
       Start now
-      <svg
-        class="govuk-button__start-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="17.5"
-        height="19"
-        viewBox="0 0 33 40"
-        aria-hidden="true"
-        focusable="false"
-      >
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
       </svg>
     </a> -->
-    <h1 class="govuk-heading-l">Registration start pages</h1>
-    <div>
-      <a
-        href="/journey-start-options/option-1.html"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Option 1
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-    </div>
-    <div>
-      <a
-        href="/journey-start-options/option-2.html"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Option 2
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-    </div>
-
-    <div>
-      <a
-        href="/journey-start-options/option-3.html"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Option 3
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-    </div>
-
-    <h1 class="govuk-heading-l">Ownership start pages</h1>
-    <!-- <div>
-      <a
-        href="/personal-info/journey-start.html"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
+            <h1 class="govuk-heading-l">Registration start pages</h1>
+            <div>
+                <a href="/journey-start-options/option-1.html"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Option 1
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="/journey-start-options/option-2.html"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Option 2
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="/journey-start-options/option-3.html"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Option 3
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <h1 class="govuk-heading-l">Ownership start pages</h1>
+            <!-- <div>
+      <a href="/personal-info/journey-start.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
         GOV.UK Ownership
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
         </svg>
       </a>
     </div> -->
-    <div>
-      <a
-        href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?node-id=57-4056&t=14klMSrilUPacJwH-0&scaling=min-zoom&content-scaling=fixed&page-id=57%3A3557"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Ownership option
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
+            <div>
+                <a href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?node-id=57-4056&t=14klMSrilUPacJwH-0&scaling=min-zoom&content-scaling=fixed&page-id=57%3A3557"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Ownership option
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <h1 class="govuk-heading-l">Listing Screens</h1>
+            <div>
+                <a href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?page-id=57%3A3557&node-id=57-3744&viewport=-269%2C1274%2C0.47&t=Xh9H63OiZ9QxG7q4-1&scaling=scale-down-width&content-scaling=fixed"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Sykes Cottages - Option 1
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?node-id=128-1713&t=tXaVDcW4g9O8ChxJ-0&scaling=scale-down-width&content-scaling=fixed&page-id=57%3A3557"
+                   role="button"
+                   draggable="false"
+                   class="govuk-button govuk-button--start"
+                   data-module="govuk-button">
+                    Sykes Cottages - Option 2
+                    <svg class="govuk-button__start-icon"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="17.5"
+                         height="19"
+                         viewBox="0 0 33 40"
+                         aria-hidden="true"
+                         focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+            </div>
+            <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+        </div>
     </div>
-
-    <h1 class="govuk-heading-l">Listing Screens</h1>
-    <div>
-      <a
-        href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?page-id=57%3A3557&node-id=57-3744&viewport=-269%2C1274%2C0.47&t=Xh9H63OiZ9QxG7q4-1&scaling=scale-down-width&content-scaling=fixed"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Sykes Cottages - Option 1
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-    </div>
-    <div>
-      <a
-        href="https://www.figma.com/proto/MOIty8r3PiNngSGLBbWPUL/DCMS---STLs-Alpha?node-id=128-1713&t=tXaVDcW4g9O8ChxJ-0&scaling=scale-down-width&content-scaling=fixed&page-id=57%3A3557"
-        role="button"
-        draggable="false"
-        class="govuk-button govuk-button--start"
-        data-module="govuk-button"
-      >
-        Sykes Cottages - Option 2
-        <svg
-          class="govuk-button__start-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-    </div>
-
-    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
-  </div>
-</div>
-
 {% endblock %}

@@ -1,125 +1,116 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Check your answers
-template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
-beforeContent %} {{ govukBackLink({ text: "Back", href:
-"javascript:window.history.back()" }) }} {% endblock %} {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
-    <h1 class="govuk-heading-xl">Review your answers</h1>
-      <h2 class="govuk-heading-m">
-        Address of short term rental
-      </h2>
-    <div class="govuk-inset-text">123</br>Hill Lane</br>London</br>SW13 4AE</div>
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Accomodation type
-        </dt>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Check your answers
+    template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block
+    beforeContent %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="govuk-heading-xl">Review your answers</h1>
+            <h2 class="govuk-heading-m">Address of short term rental</h2>
+            <div class="govuk-inset-text">
+                123
+            </br>
+            Hill Lane
+        </br>
+        London
+    </br>
+    SW13 4AE
+</div>
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Accomodation type</dt>
         <dd class="govuk-summary-list__value">
-          Flat
+            Flat
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">name</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total bedrooms
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Total bedrooms</dt>
         <dd class="govuk-summary-list__value">
-          2
+            2
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">date of birth</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Maximum guests
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Maximum guests</dt>
         <dd class="govuk-summary-list__value">
-          4
+            4
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Management agency
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Management agency</dt>
         <dd class="govuk-summary-list__value">
-          Yes
+            Yes
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Agency details
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Agency details</dt>
         <dd class="govuk-summary-list__value">
-          <p>Hiltonz</p>
-          <p>John Doe</p>
-          <p>john.doe@example.com</p>
-          <p>01234 567891</p>
-          <p>123 Rag Lane SW15 2SR</p>
+            <p>Hiltonz</p>
+            <p>John Doe</p>
+            <p>john.doe@example.com</p>
+            <p>01234 567891</p>
+            <p>123 Rag Lane SW15 2SR</p>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Gas safety certificate
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Gas safety certificate</dt>
         <dd class="govuk-summary-list__value">
-          gas_certificate.jpg
+            gas_certificate.jpg
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Boiler safety certificate
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Boiler safety certificate</dt>
         <dd class="govuk-summary-list__value">
-          boiler_certificate.jpg
+            boiler_certificate.jpg
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Electrical safety certificate
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Electrical safety certificate</dt>
         <dd class="govuk-summary-list__value">
-          Not applicable
+            Not applicable
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Fire safety regulation met
-        </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Fire safety regulation met</dt>
         <dd class="govuk-summary-list__value">
-          Yes
+            Yes
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
-      </div>
-      
-    </dl>
-
-    <form action="/confirmation" method="post" novalidate>
-      {{ govukButton({ text: "Continue",
-      href:"/property-info/add-another-dwelling" }) }}
-    </form>
-  </div>
+    </div>
+</dl>
+<form action="/confirmation" method="post" novalidate>
+    {{ govukButton({"text": "Continue", "href": "/property-info/add-another-dwelling"}) }}
+</form>
+</div>
 </div>
 {% endblock %}

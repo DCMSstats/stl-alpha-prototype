@@ -1,94 +1,69 @@
 {% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
+{% block pageTitle %}Question page template – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %}
 {% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
 {% endblock %}
-
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        Which certifications do you have for this property
-      </h1>
-      <form class="form" action="/compliance-info/gas-upload" method="post">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
-        <div class="govuk-inset-text">{{ data['address-line-1'] }}<br>{{ data['town-or-city']}}<br>{{ data['address-postcode'] }}</div>
-
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input
-            class="govuk-checkboxes__input"
-            id="gas"
-            name="certificates"
-            type="checkbox"
-            value="gas"
-          />
-          <label
-            class="govuk-label govuk-checkboxes__label"
-            for="gas"
-          >
-            <p class="govuk-body">
-              Gas safety certificate</br>
-              <a href="#" class="govuk-link">Read guidance about gas safety regulations for short-term lets</a>.
-            </p>
-          </label>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Which certifications do you have for this property</h1>
+            <form class="form" action="/compliance-info/gas-upload" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
+                        <div class="govuk-inset-text">
+                            {{ data['address-line-1'] }}
+                            <br>
+                            {{ data['town-or-city'] }}
+                            <br>
+                            {{ data['address-postcode'] }}
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input"
+                                       id="gas"
+                                       name="certificates"
+                                       type="checkbox"
+                                       value="gas" />
+                                <label class="govuk-label govuk-checkboxes__label" for="gas">
+                                    <p class="govuk-body">
+                                        Gas safety certificate
+                                    </br>
+                                    <a href="#" class="govuk-link">Read guidance about gas safety regulations for short-term lets</a>.
+                                </p>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input"
+                                   id="boiler"
+                                   name="certificates"
+                                   type="checkbox"
+                                   value="boiler" />
+                            <label class="govuk-label govuk-checkboxes__label" for="boiler">
+                                <p class="govuk-body">
+                                    Boiler safety certificate
+                                </br>
+                                <a href="#" class="govuk-link">Read guidance about boiler safety regulations for short-term lets</a>.
+                            </p>
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input"
+                               id="electric"
+                               name="certificates"
+                               type="checkbox"
+                               value="electric" />
+                        <label class="govuk-label govuk-checkboxes__label" for="electric">
+                            <p class="govuk-body">
+                                Electrical safety certificate
+                            </br>
+                            <a href="#" class="govuk-link">Read guidance about electrical safety regulations for short-term lets</a>.
+                        </p>
+                    </label>
+                </div>
+            </fieldset>
         </div>
-        <div class="govuk-checkboxes__item">
-          <input
-            class="govuk-checkboxes__input"
-            id="boiler"
-            name="certificates"
-            type="checkbox"
-            value="boiler"
-          />
-          <label
-            class="govuk-label govuk-checkboxes__label"
-            for="boiler"
-          >
-          <p class="govuk-body">
-            Boiler safety certificate</br>
-            <a href="#" class="govuk-link">Read guidance about boiler safety regulations for short-term lets</a>.
-          </p>
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input
-            class="govuk-checkboxes__input"
-            id="electric"
-            name="certificates"
-            type="checkbox"
-            value="electric"
-          />
-          <label
-            class="govuk-label govuk-checkboxes__label"
-            for="electric"
-          >
-          <p class="govuk-body">
-            Electrical safety certificate</br>
-            <a href="#" class="govuk-link">Read guidance about electrical safety regulations for short-term lets</a>.
-          </p>
-          </label>
-        </div>
-      </fieldset>
-    </div>
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
-      </form>
-
-    </div>
-  </div>
-
+        {{ govukButton({"text": "Continue"}) }}
+    </form>
+</div>
+</div>
 {% endblock %}

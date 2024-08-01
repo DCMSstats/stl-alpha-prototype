@@ -1,96 +1,73 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">What is your date of birth?</h1>
-
-    <form class="form" action="/personal-info/email" method="post">
-      <div class="govuk-form-group">
-        <fieldset
-          class="govuk-fieldset"
-          role="group"
-          aria-describedby="dob-hint"
-        >
-          <div id="dob-hint" class="govuk-hint">For example, 31 3 1980</div>
-          <div class="govuk-date-input" id="dob">
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label
-                  class="govuk-label govuk-date-input__label"
-                  for="dob-day"
-                >
-                  Day
-                </label>
-                <input
-                  class="govuk-input govuk-date-input__input govuk-input--width-2"
-                  id="dob-day"
-                  name="dob-day"
-                  type="text"
-                  autocomplete="bday-day"
-                  inputmode="numeric"
-                  value="{{data['dob-day']}}"
-                />
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label
-                  class="govuk-label govuk-date-input__label"
-                  for="dob-month"
-                >
-                  Month
-                </label>
-                <input
-                  class="govuk-input govuk-date-input__input govuk-input--width-2"
-                  id="dob-month"
-                  name="dob-month"
-                  type="text"
-                  autocomplete="bday-month"
-                  inputmode="numeric"
-                  value="{{data['dob-month']}}"
-                />
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label
-                  class="govuk-label govuk-date-input__label"
-                  for="dob-year"
-                >
-                  Year
-                </label>
-                <input
-                  class="govuk-input govuk-date-input__input govuk-input--width-4"
-                  id="dob-year"
-                  name="dob-year"
-                  type="text"
-                  autocomplete="bday-year"
-                  inputmode="numeric"
-                  value="{{data['dob-year']}}"
-                />
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-      {{ govukButton({ text: "Continue" }) }}
-    </form>
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Why do we need this information?
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        We need to know your nationality so we can work out which elections
-        you’re entitled to vote in. If you cannot provide your nationality,
-        you’ll have to send copies of identity documents through the post.
-      </div>
-    </details>
-  </div>
-</div>
-
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">What is your date of birth?</h1>
+            <form class="form" action="/personal-info/email" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                        <div id="dob-hint" class="govuk-hint">For example, 31 3 1980</div>
+                        <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-day">Day</label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="dob-day"
+                                           name="dob-day"
+                                           type="text"
+                                           autocomplete="bday-day"
+                                           inputmode="numeric"
+                                           value="{{ data['dob-day'] }}" />
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-month">Month</label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                           id="dob-month"
+                                           name="dob-month"
+                                           type="text"
+                                           autocomplete="bday-month"
+                                           inputmode="numeric"
+                                           value="{{ data['dob-month'] }}" />
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dob-year">Year</label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                           id="dob-year"
+                                           name="dob-year"
+                                           type="text"
+                                           autocomplete="bday-year"
+                                           inputmode="numeric"
+                                           value="{{ data['dob-year'] }}" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                {{ govukButton({"text": "Continue"}) }}
+            </form>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">Why do we need this information?</span>
+                </summary>
+                <div class="govuk-details__text">
+                    We need to know your nationality so we can work out which elections
+                    you’re entitled to vote in. If you cannot provide your nationality,
+                    you’ll have to send copies of identity documents through the post.
+                </div>
+            </details>
+        </div>
+    </div>
 {% endblock %}

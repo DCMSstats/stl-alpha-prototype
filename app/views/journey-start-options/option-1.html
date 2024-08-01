@@ -1,81 +1,66 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">
-      Apply online to register a new property as a short-term let in England
-    </h1>
-
-    <p class="govuk-body">
-      Short-term letting is when a residential property is rented out (or let)
-      for a period of less than 90 nights.
-    </p>
-
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        Operating a short-term let without registering it is now a criminal
-        offence. If you let out your property without registering it, you could
-        get a fine of up to £2,500.
-      </strong>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Apply online to register a new property as a short-term let in England</h1>
+            <p class="govuk-body">
+                Short-term letting is when a residential property is rented out (or let)
+                for a period of less than 90 nights.
+            </p>
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                    Operating a short-term let without registering it is now a criminal
+                    offence. If you let out your property without registering it, you could
+                    get a fine of up to £2,500.
+                </strong>
+            </div>
+            <p>This registration can be completed by:</p>
+            <ul class="govuk-body">
+                <li>an individual owner and operator</li>
+                <li>a multiple owner and operator (on the property with others)</li>
+                <li>a Limited Liability Company (LLC)</li>
+                <li>a Management agency</li>
+                <li>combination of the above</li>
+            </ul>
+            <h2 class="govuk-heading-m">Before you start</h2>
+            <ul class="govuk-body">
+                <li>You’ll need proof of compliance certificates.</li>
+                <li>
+                    <a href="#" class="govuk-link">Check if your dwelling type needs to be registered</a>
+                </li>
+            </ul>
+            <h2 class="govuk-heading-m">Continue your application</h2>
+            <p class="govuk-body">
+                If you've already started to apply, you can
+                <a href="/existing-lookup/registration-number" class="govuk-link">continue your application</a>
+            </p>
+            <h2 class="govuk-heading-m">Cost</h2>
+            <p class="govuk-body">
+                Each application costs £45 per property. You can pay by MasterCard, Visa,
+                Electron or Delta debit or credit card.
+            </p>
+            <h2 class="govuk-heading-m">How long it takes</h2>
+            <p class="govuk-body">You’ll usually get a response within 5 weeks from submission.</p>
+            {{ govukButton({"text": "Start Now", "isStartButton": true}) }}
+            <h2 class="govuk-heading-m">If you already have an approved registration?</h2>
+            <p class="govuk-body">
+                <a href="#" class="govuk-link">Renew or update an existing property registration</a>
+            </p>
+            <p class="govuk-body">
+                Each renewal costs £36 per property. You can pay by MasterCard, Visa,
+                Electron or Delta debit or credit card.
+            </p>
+        </div>
     </div>
-
-    <p>This registration can be completed by:</p>
-    <ul class="govuk-body">
-      <li>an individual owner and operator</li>
-      <li>a multiple owner and operator (on the property with others)</li>
-      <li>a Limited Liability Company (LLC)</li>
-      <li>a Management agency</li>
-      <li>combination of the above</li>
-    </ul>
-
-    <h2 class="govuk-heading-m">Before you start</h2>
-    <ul class="govuk-body">
-      <li>You’ll need proof of compliance certificates.</li>
-      <li>
-        <a href="#" class="govuk-link"
-          >Check if your dwelling type needs to be registered</a
-        >
-      </li>
-    </ul>
-    <h2 class="govuk-heading-m">Continue your application</h2>
-    <p class="govuk-body">
-      If you've already started to apply, you can
-      <a href="/existing-lookup/registration-number" class="govuk-link"
-        >continue your application</a
-      >
-    </p>
-
-    <h2 class="govuk-heading-m">Cost</h2>
-    <p class="govuk-body">
-      Each application costs £45 per property. You can pay by MasterCard, Visa,
-      Electron or Delta debit or credit card.
-    </p>
-
-    <h2 class="govuk-heading-m">How long it takes</h2>
-    <p class="govuk-body">
-      You’ll usually get a response within 5 weeks from submission.
-    </p>
-
-    {{ govukButton({ text: "Start Now", isStartButton:true }) }}
-
-    <h2 class="govuk-heading-m">
-      If you already have an approved registration?
-    </h2>
-    <p class="govuk-body">
-      <a href="#" class="govuk-link"
-        >Renew or update an existing property registration</a
-      >
-    </p>
-    <p class="govuk-body">
-      Each renewal costs £36 per property. You can pay by MasterCard, Visa,
-      Electron or Delta debit or credit card.
-    </p>
-  </div>
-</div>
-
 {% endblock %}

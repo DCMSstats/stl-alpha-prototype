@@ -1,45 +1,37 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Confirmation page
-template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
-content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    {{ govukPanel({ titleText: "Application successful", html: "Your reference
-    number<br /><strong>ABC-DEF-123-456</strong>" }) }}
-
-    <p>We have sent you a confirmation email.</p>
-
-    <h2 class="govuk-heading-m">What happens next</h2>
-
-    <p>
-      Your application will be reviewed and a decision will be made within
-      approximately 5 weeks. You will be notified of this via email.
-    </p>
-
-    <p>
-      You will be contacted by phone or email if you need to provide more
-      information to assist your application.
-    </p>
-
-    <p>
-      You can contact STL England on 0123 456 7891 or
-      <a href="#" class="govuk-link">stlengland@example.com</a> if you need
-      extra assistance.
-    </p>
-
-    <p>
-      You can
-      <a href="#" class="govuk-link">print and save this page as a PDF </a
-      >(opens in a new tab)
-    </p>
-
-    <p>
-      <a href="#" class="govuk-link">What did you think of this service? </a
-      >(takes 30 seconds)
-    </p>
-
-    {{ govukButton({ text: "Finish and close" , href:"#" }) }}
-  </div>
-</div>
-
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Confirmation page
+    template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block
+    content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            {{ govukPanel({ titleText: "Application successful", html: "Your reference
+                        number<br /><strong>ABC-DEF-123-456</strong>" }) }}
+            <p>We have sent you a confirmation email.</p>
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p>
+                Your application will be reviewed and a decision will be made within
+                approximately 5 weeks. You will be notified of this via email.
+            </p>
+            <p>
+                You will be contacted by phone or email if you need to provide more
+                information to assist your application.
+            </p>
+            <p>
+                You can contact STL England on 0123 456 7891 or
+                <a href="#" class="govuk-link">stlengland@example.com</a> if you need
+                extra assistance.
+            </p>
+            <p>
+                You can
+                <a href="#" class="govuk-link">print and save this page as a PDF</a>(opens in a new tab)
+            </p>
+            <p>
+                <a href="#" class="govuk-link">What did you think of this service?</a>(takes 30 seconds)
+            </p>
+            {{ govukButton({"text": "Finish and close", "href": "#"}) }}
+        </div>
+    </div>
 {% endblock %}

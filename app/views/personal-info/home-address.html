@@ -1,106 +1,87 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">What is your current home address?</h1>
-
-    <form class="form" action="/personal-info/check-details" method="post">
-      <fieldset class="govuk-fieldset">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="address-line-1">
-            Address line 1
-          </label>
-          <input
-            class="govuk-input"
-            id="address-line-1"
-            name="address-line-1"
-            type="text"
-            autocomplete="address-line-1"
-            value="{{ data['address-line-1'] }}"
-          />
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">What is your current home address?</h1>
+            <form class="form" action="/personal-info/check-details" method="post">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-1">Address line 1</label>
+                        <input class="govuk-input"
+                               id="address-line-1"
+                               name="address-line-1"
+                               type="text"
+                               autocomplete="address-line-1"
+                               value="{{ data['address-line-1'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-2">Address line 2 (optional)</label>
+                        <input class="govuk-input"
+                               id="address-line-2"
+                               name="address-line-2"
+                               type="text"
+                               autocomplete="address-line-2"
+                               value="{{ data['address-line-2'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="town-or-city">Town or city</label>
+                        <input class="govuk-input"
+                               id="town-or-city"
+                               name="town-or-city"
+                               type="text"
+                               autocomplete="town-or-city"
+                               value="{{ data['town-or-city'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="county">County (optional)</label>
+                        <input class="govuk-input"
+                               id="county"
+                               name="county"
+                               type="text"
+                               autocomplete="county"
+                               value="{{ data['county'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-postcode">Postcode</label>
+                        <input class="govuk-input govuk-input--width-10"
+                               id="address-postcode"
+                               name="address-postcode"
+                               type="text"
+                               autocomplete="postal-code"
+                               value="{{ data['address-postcode'] }}" />
+                    </div>
+                </fieldset>
+                {{ govukButton({"text": "Continue"}) }}
+            </form>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">Why do we need this information?</span>
+                </summary>
+                <div class="govuk-details__text">
+                    We need to know your nationality so we can work out which elections
+                    you’re entitled to vote in. If you cannot provide your nationality,
+                    you’ll have to send copies of identity documents through the post.
+                </div>
+            </details>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">What is this used for?</span>
+                </summary>
+                <div class="govuk-details__text">
+                    We need to know your nationality so we can work out which elections
+                    you’re entitled to vote in. If you cannot provide your nationality,
+                    you’ll have to send copies of identity documents through the post.
+                </div>
+            </details>
         </div>
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="address-line-2">
-            Address line 2 (optional)
-          </label>
-          <input
-            class="govuk-input"
-            id="address-line-2"
-            name="address-line-2"
-            type="text"
-            autocomplete="address-line-2"
-            value="{{ data['address-line-2'] }}"
-          />
-        </div>
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="town-or-city"> Town or city </label>
-          <input
-            class="govuk-input"
-            id="town-or-city"
-            name="town-or-city"
-            type="text"
-            autocomplete="town-or-city"
-            value="{{ data['town-or-city'] }}"
-          />
-        </div>
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="county"> County (optional) </label>
-          <input
-            class="govuk-input"
-            id="county"
-            name="county"
-            type="text"
-            autocomplete="county"
-            value="{{ data['county'] }}"
-          />
-        </div>
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="address-postcode"> Postcode </label>
-          <input
-            class="govuk-input govuk-input--width-10"
-            id="address-postcode"
-            name="address-postcode"
-            type="text"
-            autocomplete="postal-code"
-            value="{{ data['address-postcode'] }}"
-          />
-        </div>
-      </fieldset>
-
-      {{ govukButton({ text: "Continue" }) }}
-    </form>
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Why do we need this information?
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        We need to know your nationality so we can work out which elections
-        you’re entitled to vote in. If you cannot provide your nationality,
-        you’ll have to send copies of identity documents through the post.
-      </div>
-    </details>
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          What is this used for?
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        We need to know your nationality so we can work out which elections
-        you’re entitled to vote in. If you cannot provide your nationality,
-        you’ll have to send copies of identity documents through the post.
-      </div>
-    </details>
-  </div>
-</div>
-
+    </div>
 {% endblock %}

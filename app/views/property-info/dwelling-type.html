@@ -1,58 +1,50 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">
-      Are you registering an entire dwelling or part of a dwelling as a
-      short-term rental?
-    </h1>
-
-
-    <form class="form" action="/dwelling-size" method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="dwelling-type"
-                name="dwelling-type"
-                type="radio"
-                value="full"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="dwelling-type"
-              >
-                I am registering the entire dwelling as a short-term rental
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="dwelling-type-2"
-                name="dwelling-type"
-                type="radio"
-                value="part"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="dwelling-type-2"
-              >
-                I am only registering part of a dwelling as a short-term rental (for example, a room)
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      {{ govukButton({ text: "Continue"})
-      }}
-    </form>
-  </div>
-</div>
-
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">
+                Are you registering an entire dwelling or part of a dwelling as a
+                short-term rental?
+            </h1>
+            <form class="form" action="/dwelling-size" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input"
+                                       id="dwelling-type"
+                                       name="dwelling-type"
+                                       type="radio"
+                                       value="full" />
+                                <label class="govuk-label govuk-radios__label" for="dwelling-type">
+                                    I am registering the entire dwelling as a short-term rental
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input"
+                                       id="dwelling-type-2"
+                                       name="dwelling-type"
+                                       type="radio"
+                                       value="part" />
+                                <label class="govuk-label govuk-radios__label" for="dwelling-type-2">
+                                    I am only registering part of a dwelling as a short-term rental (for example, a room)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                {{ govukButton({"text": "Continue"}) 
+                }}
+            </form>
+        </div>
+    </div>
 {% endblock %}

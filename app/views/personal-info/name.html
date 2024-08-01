@@ -1,73 +1,64 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div
-      class="govuk-notification-banner"
-      role="region"
-      aria-labelledby="govuk-notification-banner-title"
-      data-module="govuk-notification-banner"
-    >
-      <div class="govuk-notification-banner__header">
-        <h2
-          class="govuk-notification-banner__title"
-          id="govuk-notification-banner-title"
-        >
-          Important
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          If you are applying on behalf of the owner, answer these questions
-          with their details rather than your own.
-        </p>
-      </div>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-notification-banner"
+                 role="region"
+                 aria-labelledby="govuk-notification-banner-title"
+                 data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title"
+                        id="govuk-notification-banner-title">Important</h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">
+                        If you are applying on behalf of the owner, answer these questions
+                        with their details rather than your own.
+                    </p>
+                </div>
+            </div>
+            <h1 class="govuk-heading-l">What is your name?</h1>
+            <form class="form" action="/personal-info/dob" method="post">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="title">Title</label>
+                        <input class="govuk-input govuk-input--width-5"
+                               id="title"
+                               name="title"
+                               type="text"
+                               autocomplete="title"
+                               value="{{ data['title'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="first-name">First name</label>
+                        <input class="govuk-input govuk-input--width-20"
+                               id="first-name"
+                               name="first-name"
+                               type="text"
+                               autocomplete="first-name"
+                               value="{{ data['first-name'] }}" />
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="last-name">Last name</label>
+                        <input class="govuk-input govuk-input--width-20"
+                               id="last-name"
+                               name="last-name"
+                               type="text"
+                               autocomplete="lastName"
+                               value="{{ data['last-name'] }}" />
+                    </div>
+                </fieldset>
+                {{ govukButton({"text": "Continue"}) }}
+            </form>
+        </div>
     </div>
-    <h1 class="govuk-heading-l">What is your name?</h1>
-
-    <form class="form" action="/personal-info/dob" method="post">
-      <fieldset class="govuk-fieldset">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="title"> Title </label>
-          <input
-            class="govuk-input govuk-input--width-5"
-            id="title"
-            name="title"
-            type="text"
-            autocomplete="title"
-            value="{{ data['title'] }}"
-          />
-        </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="first-name"> First name </label>
-          <input
-            class="govuk-input govuk-input--width-20"
-            id="first-name"
-            name="first-name"
-            type="text"
-            autocomplete="first-name"
-            value="{{ data['first-name'] }}"
-          />
-        </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="last-name"> Last name </label>
-          <input
-            class="govuk-input govuk-input--width-20"
-            id="last-name"
-            name="last-name"
-            type="text"
-            autocomplete="lastName"
-            value="{{ data['last-name'] }}"
-          />
-        </div>
-      </fieldset>
-
-      {{ govukButton({ text: "Continue" }) }}
-    </form>
-  </div>
-</div>
-
 {% endblock %}

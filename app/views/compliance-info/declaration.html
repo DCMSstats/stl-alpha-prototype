@@ -1,58 +1,55 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Declaration</h1>
-    <p class="govuk-body">
-      You are submitting applications for the following addresses:
-    </p>
-    <ul class="govuk-body">
-      <li><strong>123 Hill Lane, London, SW13 4AE</strong></li>
-      <li><strong>124 Hill Lane, London, SW13 4AE</strong></li>
-    </ul>
-    <p class="govuk-body">
-      By sending the application you agree that the information you have given
-      is complete and correct. If you deliberately give the wrong or incomplete
-      information, or you do not report any changes, you may:
-    </p>
-    <ul class="govuk-body">
-      <li>have your application rejected</li>
-      <li>need to pay a financial penalty</li>
-    </ul>
-
-    <form class="form" action="/path/of/next/page" method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input
-                class="govuk-checkboxes__input"
-                id="option"
-                name="declaration-options"
-                type="checkbox"
-                value="op1"
-              />
-              <label
-                class="govuk-label govuk-checkboxes__label"
-                for="option"
-              >
-                I understand and agree with the above
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      {{ govukButton({ text: "Continue to payment", href: "/pay/payment-summary"
-      }) }}
-    </form>
-    <p class="govuk-body">
-      <a href="#" class="govuk-link">Save and complete later</a>
-    </p>
-  </div>
-</div>
-
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Declaration</h1>
+            <p class="govuk-body">You are submitting applications for the following addresses:</p>
+            <ul class="govuk-body">
+                <li>
+                    <strong>123 Hill Lane, London, SW13 4AE</strong>
+                </li>
+                <li>
+                    <strong>124 Hill Lane, London, SW13 4AE</strong>
+                </li>
+            </ul>
+            <p class="govuk-body">
+                By sending the application you agree that the information you have given
+                is complete and correct. If you deliberately give the wrong or incomplete
+                information, or you do not report any changes, you may:
+            </p>
+            <ul class="govuk-body">
+                <li>have your application rejected</li>
+                <li>need to pay a financial penalty</li>
+            </ul>
+            <form class="form" action="/path/of/next/page" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input"
+                                       id="option"
+                                       name="declaration-options"
+                                       type="checkbox"
+                                       value="op1" />
+                                <label class="govuk-label govuk-checkboxes__label" for="option">I understand and agree with the above</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                {{ govukButton({"text": "Continue to payment", "href": "/pay/payment-summary"}) }}
+            </form>
+            <p class="govuk-body">
+                <a href="#" class="govuk-link">Save and complete later</a>
+            </p>
+        </div>
+    </div>
 {% endblock %}

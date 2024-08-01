@@ -1,90 +1,58 @@
 {% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
+{% block pageTitle %}Question page template – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %}
 {% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
 {% endblock %}
-
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        Confirm your payment
-      </h1>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
-
-
-        <div class="govuk-inset-text">2 properties at £45 each</br>Total amount:</br>£90</br></div>
-  <dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Card number:
-      </dt>
-      <dd class="govuk-summary-list__value">
-        ************5556
-      </dd>
-     
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Confirm your payment</h1>
+            <form class="form" action="/path/of/next/page" method="post">
+                <div class="govuk-inset-text">
+                    2 properties at £45 each
+                </br>
+                Total amount:
+            </br>
+            £90
+        </br>
     </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Expiry date: 
-      </dt>
-      <dd class="govuk-summary-list__value">
-        10/25
-      </dd>
-      
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Name on card:
-      </dt>
-      <dd class="govuk-summary-list__value">
-        Sarah Philips
-      </dd>
-
-    </div>
-
+    <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Billing address:
-          </dt>
-          <dd class="govuk-summary-list__value">
-            2 Logg way, Birmingham, BG13 1HN
-          </dd>
-        
+            <dt class="govuk-summary-list__key">Card number:</dt>
+            <dd class="govuk-summary-list__value">
+                ************5556
+            </dd>
         </div>
-
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Confirmation email:
-      </dt>
-      <dd class="govuk-summary-list__value">
-        sarahphilips@example.com
-      </dd>
-    
-    </div>
-  
-  </dl>
-
-        {{ govukButton({
-          text: "Confirm payment", href:"/pay/payment-successful"
-        }) }}
-
-      </form>
-    <p class="govuk-body">
-      <a href="#" class="govuk-link">Cancel payment</a>
-    </p>
-    </div>
-  </div>
-
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Expiry date:</dt>
+            <dd class="govuk-summary-list__value">
+                10/25
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Name on card:</dt>
+            <dd class="govuk-summary-list__value">
+                Sarah Philips
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Billing address:</dt>
+            <dd class="govuk-summary-list__value">
+                2 Logg way, Birmingham, BG13 1HN
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Confirmation email:</dt>
+            <dd class="govuk-summary-list__value">
+                sarahphilips@example.com
+            </dd>
+        </div>
+    </dl>
+    {{ govukButton({"text": "Confirm payment", "href": "/pay/payment-successful"}) }}
+</form>
+<p class="govuk-body">
+    <a href="#" class="govuk-link">Cancel payment</a>
+</p>
+</div>
+</div>
 {% endblock %}

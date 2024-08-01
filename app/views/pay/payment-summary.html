@@ -1,70 +1,68 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Payment Summary</h1>
-      <div class="govuk-inset-text">2 properties at £45 each</br>Total amount:</br>£90</br></div>
-
-    <form class="form" action="/path/of/next/page" method="post">
-      <fieldset class="govuk-fieldset">
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Payment Summary</h1>
+            <div class="govuk-inset-text">
+                2 properties at £45 each
+            </br>
+            Total amount:
+        </br>
+        £90
+    </br>
+</div>
+<form class="form" action="/path/of/next/page" method="post">
+    <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">Enter card details</h1>
+            <h1 class="govuk-fieldset__heading">Enter card details</h1>
         </legend>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="card-number"> Card number </label>
-          <input
-            class="govuk-input govuk-!-width-two-thirds"
-            id="card-number"
-            name="payment-details"
-            type="text"
-          />
+            <label class="govuk-label" for="card-number">Card number</label>
+            <input class="govuk-input govuk-!-width-two-thirds"
+                   id="card-number"
+                   name="payment-details"
+                   type="text" />
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="expiry"> Expiry date </label>
-          <input
-            class="govuk-input govuk-input--width-2"
-            id="expiry"
-            name="payment-details"
-            type="text"
-            autocomplete="address-line2"
-          />
-          <input
-            class="govuk-input govuk-input--width-2"
-            id="expiry-2"
-            name="payment-details"
-            type="text"
-            autocomplete="expiry-2"
-          />
+            <label class="govuk-label" for="expiry">Expiry date</label>
+            <input class="govuk-input govuk-input--width-2"
+                   id="expiry"
+                   name="payment-details"
+                   type="text"
+                   autocomplete="address-line2" />
+            <input class="govuk-input govuk-input--width-2"
+                   id="expiry-2"
+                   name="payment-details"
+                   type="text"
+                   autocomplete="expiry-2" />
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="address-town"> Name on card </label>
-          <input
-            class="govuk-input govuk-!-width-two-thirds"
-            id="card-name"
-            name="payment-details"
-            type="text"
-            autocomplete="card-name"
-          />
+            <label class="govuk-label" for="address-town">Name on card</label>
+            <input class="govuk-input govuk-!-width-two-thirds"
+                   id="card-name"
+                   name="payment-details"
+                   type="text"
+                   autocomplete="card-name" />
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="address-county">
-            Security code
-          </label>
-          <input
-            class="govuk-input govuk-input--width-4"
-            id="security-code"
-            name="payment-details"
-            type="text"
-          />
+            <label class="govuk-label" for="address-county">Security code</label>
+            <input class="govuk-input govuk-input--width-4"
+                   id="security-code"
+                   name="payment-details"
+                   type="text" />
         </div>
-      </fieldset>
-
-      {{ govukButton({ text: "Continue" , href:"/pay/check-your-details" }) }}
-    </form>
-  </div>
+    </fieldset>
+    {{ govukButton({"text": "Continue", "href": "/pay/check-your-details"}) }}
+</form>
 </div>
-
+</div>
 {% endblock %}
