@@ -1,32 +1,25 @@
-{% extends "layouts/main.html" %}
-{% block pageTitle %}
-    Question page template –
-    {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-{% block beforeContent
-    %}
-    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
-    }}
-{% endblock %}
-{% block content %}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">
-                What is the maximum number of guests that the property can accomodate at
-                one time?
-            </h1>
-            <form class="form" action="/property-info/managed" method="post">
-                <div class="govuk-form-group">
-                    <select class="govuk-select" id="guests" name="guests">
-                        <option value="no-guests"></option>
-                        <option value="one-guest">1</option>
-                        <option value="two-guests">2</option>
-                        <option value="three-guests">3</option>
-                        <option value="four-guests">4</option>
-                    </select>
-                </div>
-                {{ govukButton({"text": "Continue"}) }}
-            </form>
-        </div>
-    </div>
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      What is the maximum number of guests that the property can accomodate at
+      one time?
+    </h1>
+    <form class="form" action="/property-info/managed" method="post">
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="guests" name="guests">
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      {{ govukButton({"text": "Continue"}) }}
+    </form>
+  </div>
+</div>
 {% endblock %}

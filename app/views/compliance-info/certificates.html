@@ -4,6 +4,10 @@
     {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
 {% endblock %}
 {% block content %}
+{%
+    set addressLineOne = data['address-line-1'] or "2 Logg Lane" %} {% set
+    townOrCity = data['town-or-city'] or "Birmingham" %} {% set addressPostcode =
+    data['address-postcode'] or "BG13 1HN" %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-l">Which certifications do you have for this property</h1>
@@ -11,11 +15,11 @@
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
                         <div class="govuk-inset-text">
-                            {{ data['address-line-1'] }}
+                            {{ addressLineOne }}
                             <br>
-                            {{ data['town-or-city'] }}
+                            {{ townOrCity }}
                             <br>
-                            {{ data['address-postcode'] }}
+                            {{ addressPostcode }}
                         </div>
                         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                             <div class="govuk-checkboxes__item">

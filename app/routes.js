@@ -19,7 +19,7 @@ router.post("/different-address", function (request, response) {
 
 router.post("/managed", function (request, response) {
   var management_type = request.session.data["managed"];
-  if (management_type == "agency") {
+  if (management_type == "Yes") {
     response.redirect("/property-info/agency-details");
   } else {
     response.redirect("/compliance-info/certificates");

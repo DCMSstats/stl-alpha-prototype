@@ -8,24 +8,27 @@
     {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
 {% endblock %}
 {% block content %}
+
+{%
+    set addressLineOne = data['address-line-1'] or "2 Logg Lane" %} {% set
+    townOrCity = data['town-or-city'] or "Birmingham" %} {% set addressPostcode =
+    data['address-postcode'] or "BG13 1HN" %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
             <h1 class="govuk-heading-xl">Review your answers</h1>
             <h2 class="govuk-heading-m">Address of short term rental</h2>
             <div class="govuk-inset-text">
-                123
+                {{ addressLineOne }}
             </br>
-            Hill Lane
+            {{townOrCity}}
         </br>
-        London
-    </br>
-    SW13 4AE
+        {{addressPostcode}}
 </div>
 <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Accomodation type</dt>
         <dd class="govuk-summary-list__value">
-            Flat
+            {{ data['accomodation-type'] or "Not selected" }}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">name</span></a>
@@ -34,7 +37,7 @@
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Total bedrooms</dt>
         <dd class="govuk-summary-list__value">
-            2
+            {{ data['bedrooms'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">date of birth</span></a>
@@ -43,7 +46,7 @@
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Maximum guests</dt>
         <dd class="govuk-summary-list__value">
-            4
+            {{ data['guests'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
@@ -52,12 +55,13 @@
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Management agency</dt>
         <dd class="govuk-summary-list__value">
-            Yes
+            {{ data['managed'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
+   
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Agency details</dt>
         <dd class="govuk-summary-list__value">
@@ -71,6 +75,7 @@
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
+    
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Gas safety certificate</dt>
         <dd class="govuk-summary-list__value">
@@ -101,7 +106,7 @@
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Fire safety regulation met</dt>
         <dd class="govuk-summary-list__value">
-            Yes
+            {{ data['fire-safety'] or "Not selected" }}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>

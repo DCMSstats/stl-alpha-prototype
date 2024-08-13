@@ -1,7 +1,10 @@
 {% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
 {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
 %} {{ govukBackLink({"text": "Back", "href":
-"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %} {%
+set addressLineOne = data['address-line-1'] or "2 Logg Lane" %} {% set
+townOrCity = data['town-or-city'] or "Birmingham" %} {% set addressPostcode =
+data['address-postcode'] or "BG13 1HN" %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
@@ -9,8 +12,7 @@
       home address?
     </h1>
     <div class="govuk-inset-text">
-      {{ data['address-line-1'] }}, {{ data['town-or-city'] }}, {{
-      data['address-postcode'] }}
+      {{ addressLineOne }}, {{ townOrCity }}, {{ addressPostcode }}
     </div>
     <form class="form" action="/different-address" method="post">
       <div class="govuk-form-group">

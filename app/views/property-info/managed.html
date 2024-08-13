@@ -1,38 +1,47 @@
-{% extends "layouts/main.html" %}
-{% block pageTitle %}Question page template – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %}
-{% block beforeContent %}
-    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
-{% endblock %}
-{% block content %}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Is the short-term rental managed by an agency?</h1>
-            <form class="form" action="/managed" method="post">
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <div class="govuk-radios" data-module="govuk-radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="agency-managed"
-                                       name="managed"
-                                       type="radio"
-                                       value="agency" />
-                                <label class="govuk-label govuk-radios__label" for="agency-managed">Yes</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="self-managed"
-                                       name="managed"
-                                       type="radio"
-                                       value="self" />
-                                <label class="govuk-label govuk-radios__label" for="self-managed">No</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                {{ govukButton({"text": "Continue"}) 
-                }}
-            </form>
-        </div>
-    </div>
+{% extends "layouts/main.html" %} {% block pageTitle %}Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit{% endblock %} {% block beforeContent %}
+{{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"})
+}} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Is the short-term rental managed by an agency?
+    </h1>
+    <form class="form" action="/managed" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="agency-managed"
+                name="managed"
+                type="radio"
+                value="Yes"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="agency-managed"
+                >Yes</label
+              >
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="self-managed"
+                name="managed"
+                type="radio"
+                value="No"
+              />
+              <label class="govuk-label govuk-radios__label" for="self-managed"
+                >No</label
+              >
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {{ govukButton({"text": "Continue"}) }}
+    </form>
+  </div>
+</div>
 {% endblock %}
