@@ -1,76 +1,33 @@
-{% extends "layouts/main.html" %}
-{% block pageTitle %}
-    Question page template –
-    {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-{% block beforeContent
-    %}
-    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
-    }}
-{% endblock %}
-{% block content %}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">How are you operating the short term let?</h1>
-            <form class="form" action="/path/of/next/page" method="post">
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <div class="govuk-radios" data-module="govuk-radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="operating-model"
-                                       name="operating-model"
-                                       type="radio"
-                                       value="individual-operator" />
-                                <label class="govuk-label govuk-radios__label" for="operating-model">As an individual owner and operator</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="operating-model-2"
-                                       name="operating-model"
-                                       type="radio"
-                                       value="multiple-operator" />
-                                <label class="govuk-label govuk-radios__label" for="operating-model-2">
-                                    As a multiple owner and operator (own the property with others)
-                                </label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="operating-model-3"
-                                       name="operating-model"
-                                       type="radio"
-                                       value="llc-operator" />
-                                <label class="govuk-label govuk-radios__label" for="operating-model-3">
-                                    As part of a Limited Liability Company (LLC)
-                                </label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="operating-model-4"
-                                       name="operating-model"
-                                       type="radio"
-                                       value="management-agency-operator" />
-                                <label class="govuk-label govuk-radios__label" for="operating-model-4">As a management agency</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input"
-                                       id="operating-model-5"
-                                       name="operating-model"
-                                       type="radio"
-                                       value="combination-operator" />
-                                <label class="govuk-label govuk-radios__label" for="operating-model-5">As a combination of the above</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                {{ govukButton({"text": "Continue", "href": "/personal-info/name"}) }}
-            </form>
-            <details class="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">What is considered a combination of the above?</span>
-                </summary>
-                <div class="govuk-details__text">Detail as to what we consider a combination.</div>
-            </details>
-        </div>
-    </div>
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/personal-info/name" method="post">
+      {% from "govuk/components/radios/macro.njk" import govukRadios %} {{
+      govukRadios({ name: "operating-model", fieldset: { legend: { text: "How
+      are you operating the short term let?", isPageHeading: true, classes:
+      "govuk-fieldset__legend--l" } }, items: [ { value: "As an individual owner
+      and operator", text: "As an individual owner and operator" }, { value: "As
+      a multiple owner and operator (own the property with others)", text: "As a
+      multiple owner and operator (own the property with others)" }, { value:
+      "As part of a Limited Liability Company (LLC)", text: "As part of a
+      Limited Liability Company (LLC)" }, { value: "As a management agency",
+      text: "As a management agency" }, { value: "As a combination of the
+      above", text: "As a combination of the above" } ] }) }} {{
+      govukButton({"text": "Continue"}) }}
+    </form>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >What is considered a combination of the above?</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        Detail as to what we consider a combination.
+      </div>
+    </details>
+  </div>
+</div>
 {% endblock %}
