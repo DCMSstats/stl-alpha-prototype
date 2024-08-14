@@ -22,7 +22,7 @@ router.post("/managed", function (request, response) {
   if (management_type == "Yes") {
     response.redirect("/property-info/agency-details");
   } else {
-    response.redirect("/compliance-info/certificates");
+    response.redirect("/compliance-info/gas-upload");
   }
 });
 
