@@ -26,12 +26,12 @@
 </div>
 <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">Accomodation type</dt>
+        <dt class="govuk-summary-list__key">Accommodation type</dt>
         <dd class="govuk-summary-list__value">
             {{ data['accomodation-type'] or "Not selected" }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">name</span></a>
+            <a class="govuk-link" href="/property-info/accomodation-type">Change<span class="govuk-visually-hidden">name</span></a>
         </dd>
     </div>
     <div class="govuk-summary-list__row">
@@ -40,7 +40,7 @@
             {{ data['bedrooms'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">date of birth</span></a>
+            <a class="govuk-link" href="/property-info/bedroom-count">Change<span class="govuk-visually-hidden">date of birth</span></a>
         </dd>
     </div>
     <div class="govuk-summary-list__row">
@@ -49,7 +49,7 @@
             {{ data['guests'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/property-info/guest-count">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
     <div class="govuk-summary-list__row">
@@ -58,7 +58,7 @@
             {{ data['managed'] or "Not selected"}}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/property-info/managed">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
     {% if (data['managed'] == "Yes") %}
@@ -72,7 +72,7 @@
             <p>123 Rag Lane SW15 2SR</p>
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/property-info/agency-details">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
     {% endif %}
@@ -83,7 +83,7 @@
             gas_certificate.jpg
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/compliance-info/gas-upload">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
     <div class="govuk-summary-list__row">
@@ -92,7 +92,7 @@
             {{ data['fire-safety'] or "Not selected" }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/compliance-info/fire-safety">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
     <div class="govuk-summary-list__row">
@@ -101,7 +101,7 @@
             {{ data['electrical-safety'] or "Not selected" }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">address</span></a>
+            <a class="govuk-link" href="/compliance-info/electrical-safety">Change<span class="govuk-visually-hidden">address</span></a>
         </dd>
     </div>
 </dl>

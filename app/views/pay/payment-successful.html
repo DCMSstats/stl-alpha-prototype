@@ -1,31 +1,27 @@
-{% extends "layouts/main.html" %}
-{% block pageTitle %}Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %}
-{% block content %}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            {{ govukPanel({
-                "titleText": "Payment successful",
-                "html": "Your payment reference number is <strong>HDJ2123F</strong>"
-            }) }}
-            <h2 class="govuk-heading-m">What happens next</h2>
-            <p>We have sent you a confirmation email</p>
-            <h2 class="govuk-heading-m">Payment summary</h2>
-            <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Payment for:</dt>
-                    <dd class="govuk-summary-list__value">
-                        2 Short term let registrations
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Total:</dt>
-                    <dd class="govuk-summary-list__value">
-                        £90
-                    </dd>
-                </div>
-            </dl>
-            {{ govukButton({"text": "Continue and complete", "href": "/summary/confirmation-screen"}) 
-            }}
-        </div>
-    </div>
+{% extends "layouts/main.html" %} {% block pageTitle %}Confirmation page
+template – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %} {% block
+content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({ "titleText": "Payment successful", "html": "Your payment
+    reference number is <strong>HDJ2123F</strong>" }) }}
+    <h2 class="govuk-heading-m">What happens next</h2>
+    <p>We have sent you an email confirming payment of the registration fee</p>
+    <h2 class="govuk-heading-m">Payment summary</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Payment for:</dt>
+        <dd class="govuk-summary-list__value">
+          2 Short term let registrations
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Total:</dt>
+        <dd class="govuk-summary-list__value">£90</dd>
+      </div>
+    </dl>
+    {{ govukButton({"text": "Continue and complete", "href":
+    "/summary/confirmation-screen"}) }}
+  </div>
+</div>
 {% endblock %}
