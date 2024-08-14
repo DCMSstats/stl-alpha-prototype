@@ -1,12 +1,17 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({"text": "Back", "href":
-"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Start page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block beforeContent %} {{
+govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service - your
+<a class="govuk-link" href="#">feedback </a> will help us improve it.' }) }} {%
+endblock %} {% block content %}
+
 <div class="govuk-grid-row">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+    Apply online to register a new property/ properties as a short-term let in
+    England
+  </h1>
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">
-      Apply online to register a new property as a short-term let in England
-    </h1>
     <p class="govuk-body">
       Short term letting is when a residential property is rented out (or let)
       for a period of less than 90 nights.
@@ -15,13 +20,10 @@
       Who qualifies to complete the short-term registration:
     </h2>
     <ul class="govuk-body">
-      <li>Individual Homeowners</li>
-      <li>Multiple property ownership</li>
+      <li>Owners of a single short-term let property</li>
+      <li>Owners of multiple short-term let properties</li>
       <li>Registering on behalf of a property owner</li>
       <li>Management agency</li>
-      <li>
-        As part of a limited liability company (LLC)/ investment companies/Ltd
-      </li>
     </ul>
     <h2 class="govuk-heading-m">Before you start</h2>
     <details class="govuk-details">
@@ -30,7 +32,10 @@
           Check the type of dwelling that needs registration
         </span>
       </summary>
-      <div class="govuk-details__text">TBC</div>
+      <div class="govuk-details__text">
+        More information will be provided here on dwellings that require
+        registration
+      </div>
     </details>
     <details class="govuk-details">
       <summary class="govuk-details__summary">
@@ -53,7 +58,9 @@
           Check what happens to my data
         </span>
       </summary>
-      <div class="govuk-details__text">TBC</div>
+      <div class="govuk-details__text">
+        More information will be provided here on how we use your data.
+      </div>
     </details>
 
     <h2 class="govuk-heading-m">How much will it cost</h2>
@@ -66,7 +73,24 @@
       You’ll usually get a response within 5 weeks from submission.
     </p>
     {{ govukButton({"text": "Start registration now", "href":
-    "/personal-info/initial-declaration", "isStartButton": true}) }} {% endblock
-    %}
+    "/personal-info/initial-declaration", "isStartButton": true}) }}
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Related content</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#"> Short-term let registration: detailed information</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
   </div>
 </div>
+
+{% endblock %}

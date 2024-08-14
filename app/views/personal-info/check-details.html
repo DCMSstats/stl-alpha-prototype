@@ -1,39 +1,33 @@
-{% extends "layouts/main.html" %}
-{% block pageTitle %}
-    Check your answers
-    template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-{% block
-    beforeContent %}
-    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) }}
-{% endblock %}
-{% block content %}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds-from-desktop">
-            <h1 class="govuk-heading-xl">Review your answers</h1>
-            {{ govukSummaryList({
-                        classes: "govuk-!-margin-bottom-9",
-                        rows: [{key: {text: "Operator" }, value: { text: "Individual owner" }, actions: { items: [
-                        { href: "/personal-info/operating-model", text: "Change",
-                        visuallyHiddenText: "operator" } ] } }, { key: {text: "Name" }, value: {
-                        text: "Sarah Phillips" }, actions: { items: [ { href: "/personal-info/name",
-                        text: "Change", visuallyHiddenText: "name" } ] } }, { key: { text: "Date of
-                        birth" }, value: { text: "5 January 1978" }, actions: { items: [ { href:
-                        "/personal-info/dob", text: "Change", visuallyHiddenText: "date of birth" }
-                        ] } }, { key: { text: "Address" }, value: { html: "2 Logg Way
-                        <br />Birmingham<br />BG13 1HN" }, actions: { items: [ { href:
-                        "/personal-info/home-address", text: "Change", visuallyHiddenText: "address"
-                        } ] } }, { key: { text: "Email" }, value: { html: '
-                        <p class="govuk-body">sarah.phillips@example.com</p>
-                        ' }, actions: { items: [ { href: "/personal-info/email", text: "Change",
-                        visuallyHiddenText: "contact details" } ] } }, { key: { text: "Phone number"
-                        }, value: { html: '
-                        <p class="govuk-body">07700 900457</p>
-                        ' }, actions: { items: [ { href: "/personal-info/phone-number", text:
-                        "Change", visuallyHiddenText: "contact details" } ] } } ] }) }}
-            <form action="/confirmation" method="post" novalidate>
-                {{ govukButton({"text": "Accept and continue", "href": "/property-info/home-address-confirmation"}) }}
-            </form>
-        </div>
-    </div>
+{% extends "layouts/main.html" %} {% block pageTitle %} Check your answers
+template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">Review your answers</h1>
+    {{ govukSummaryList({ classes: "govuk-!-margin-bottom-9", rows: [{key:
+    {text: "Operator" }, value: { text: "Individual owner" }, actions: { items:
+    [ { href: "/personal-info/operating-model", text: "Change",
+    visuallyHiddenText: "operator" } ] } }, { key: {text: "Name" }, value: {
+    text: "Sarah Phillips" }, actions: { items: [ { href: "/personal-info/name",
+    text: "Change", visuallyHiddenText: "name" } ] } }, { key: { text: "Date of
+    birth" }, value: { text: "5 January 1978" }, actions: { items: [ { href:
+    "/personal-info/dob", text: "Change", visuallyHiddenText: "date of birth" }
+    ] } }, { key: { text: "Address" }, value: { html: "2 Logg Way
+    <br />Birmingham<br />BG13 1HN" }, actions: { items: [ { href:
+    "/personal-info/home-address", text: "Change", visuallyHiddenText: "address"
+    } ] } }, { key: { text: "Email" }, value: { html: '
+    <p class="govuk-body">sarah.phillips@example.com</p>
+    ' }, actions: { items: [ { href: "/personal-info/email", text: "Change",
+    visuallyHiddenText: "contact details" } ] } }, { key: { text: "Phone number"
+    }, value: { html: '
+    <p class="govuk-body">07700 900457</p>
+    ' }, actions: { items: [ { href: "/personal-info/phone-number", text:
+    "Change", visuallyHiddenText: "contact details" } ] } } ] }) }}
+    <form action="/confirmation" method="post" novalidate>
+      {{ govukButton({"text": "Accept and continue", "href":
+      "/property-info/home-address-confirmation"}) }}
+    </form>
+  </div>
+</div>
 {% endblock %}
