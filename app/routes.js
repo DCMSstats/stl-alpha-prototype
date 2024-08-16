@@ -34,3 +34,12 @@ router.post("/dwelling-size", function (request, response) {
     response.redirect("/property-info/bedroom-count");
   }
 });
+
+router.post("/r3-different-address", function (request, response) {
+  var address_type = request.session.data["r3sameAddress"];
+  if (address_type == "sameAddress") {
+    response.redirect("/r3-multiple-property-flow/7-addresses-summary");
+  } else {
+    response.redirect("/r3-multiple-property-flow/6a-stl-postcode-lookup");
+  }
+});

@@ -13,7 +13,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
     <div class="govuk-inset-text">
       {{ data['r3-whereDoYouLive'] or "2 Logg Way, Birmingham, BG13 1HN"}}
     </div>
-    <form class="form" action="/different-address" method="post">
+    <form class="form" action="/r3-different-address" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
@@ -21,7 +21,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
               <input
                 class="govuk-radios__input"
                 id="sameAddress"
-                name="sameAddress"
+                name="r3sameAddress"
                 type="radio"
                 value="sameAddress"
               />
@@ -33,7 +33,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
               <input
                 class="govuk-radios__input"
                 id="differentAddress"
-                name="sameAddress"
+                name="r3sameAddress"
                 type="radio"
                 value="differentAddress"
               />
