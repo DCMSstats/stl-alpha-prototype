@@ -1,0 +1,301 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-l">
+    {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+  </h1>
+  <div class="govuk-grid-row">
+    <h2 class="govuk-heading-m govuk-grid-column-two-thirds">Registration number</h2>
+    <p><strong class="govuk-tag govuk-tag--blue">
+      Pending
+    </strong></p>
+  </div>
+  <div class="govuk-grid-column-full-width">
+    <form class="form" action="/path/of/next/page" method="post"></form>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#accommodation-type">
+              Accommodation
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#bedroom-number">
+              Bedrooms
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#guests">
+              Guests
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#management-agency">
+              Management agency
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#compliance">
+              Compliance
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#payments">
+              Payments
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="accommodation-type">
+          <h2 class="govuk-heading-l">Type of accommodation</h2>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="home-letting-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Home letting
+              </legend>
+              
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting" name="home-letting" type="checkbox" value="House">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting">
+                    House
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-2" name="home-letting" type="checkbox" value="Cottage">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-2">
+                    Cottage
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-3" name="home-letting" type="checkbox" value="Flat">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-3">
+                    Flat
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-4" name="home-letting" type="checkbox" value="Bungalow">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-4">
+                    Bungalow
+                  </label>
+                </div>
+              </div>
+              <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+               Home sharing
+              </legend>
+              
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-sharing" name="home-sharing" type="checkbox" value="Single room">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing">
+                    Single room
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-sharing-2" name="home-sharing" type="checkbox" value="Converted garage">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing-2">
+                    Converted garage
+                  </label>
+                </div>
+
+                <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Other
+                 </legend>
+                 
+                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                   <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="accommodation-type-other" name="accommodation-type-other" type="checkbox" value="Tree house">
+                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other">
+                       Tree house
+                     </label>
+                   </div>
+                   <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Gate house">
+                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                       Gate house
+                     </label>
+                   </div>
+                   <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Farm house">
+                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                      Farm house
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Not included in the above">
+                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                      Not included in the above
+                    </label>
+                  </div>
+                  <a href="#bedroom-number" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+                    Save and continue
+                  </a>
+            </fieldset>
+          </div>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="bedroom-number">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Bedroom number</h2>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in the details if applicable
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-full-dwelling">
+               How many bedrooms are there in the property? (Full dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="bedrooms-full-dwelling"
+                name="bedrooms-full-dwelling"
+                type="number"
+                autocomplete="bedrooms-full-dwelling"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-part-dwelling">
+                <strong>How many bedrooms are there in the property? (Part dwelling)</strong>
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="bedrooms-part-dwelling"
+                name="bedrooms-part-dwelling"
+                type="number"
+                autocomplete="bedrooms-part-dwelling"
+              />
+            </div>
+          </fieldset>
+          <a href="#guests" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guests">
+          <h2 class="govuk-heading-l">Guests</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">98</td>
+                <td class="govuk-table__cell">95</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">122</td>
+                <td class="govuk-table__cell">131</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">126</td>
+                <td class="govuk-table__cell">142</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="management-agency">
+          <h2 class="govuk-heading-l">Management agency</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">1380</td>
+                <td class="govuk-table__cell">1472</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">1129</td>
+                <td class="govuk-table__cell">1083</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">1539</td>
+                <td class="govuk-table__cell">1265</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
+          <h2 class="govuk-heading-l">Compliance</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">1380</td>
+                <td class="govuk-table__cell">1472</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">1129</td>
+                <td class="govuk-table__cell">1083</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">1539</td>
+                <td class="govuk-table__cell">1265</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments">
+          <h2 class="govuk-heading-l">Payments</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">1380</td>
+                <td class="govuk-table__cell">1472</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">1129</td>
+                <td class="govuk-table__cell">1083</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">1539</td>
+                <td class="govuk-table__cell">1265</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

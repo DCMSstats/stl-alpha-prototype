@@ -1,6 +1,8 @@
 {% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
 {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
 }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
@@ -94,17 +96,15 @@
               <div class="govuk-task-list__name-and-hint">
                 <a
                   class="govuk-link govuk-task-list__link"
-                  href="#"
-                  aria-describedby="company-details-1-status"
+                  href="/r3-multiple-property-flow/9a-address-1-tasks"
+                  aria-describedby="address-1-status"
                 >
-                  Address 1
+                  {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13
+                  4AE"}}
                 </a>
               </div>
-              <div
-                class="govuk-task-list__status"
-                id="company-details-1-status"
-              >
-                Completed
+              <div class="govuk-task-list__status" id="address-1-status">
+                <strong class="govuk-tag govuk-tag--grey"> Incomplete </strong>
               </div>
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -112,16 +112,14 @@
                 <a
                   class="govuk-link govuk-task-list__link"
                   href="#"
-                  aria-describedby="company-details-2-status"
+                  aria-describedby="address-2-status"
                 >
-                  Address 2
+                  {{ data['r3-whereDoYouLive2'] or "124 Hill Lane, London, SW13
+                  4AE"}}
                 </a>
               </div>
-              <div
-                class="govuk-task-list__status"
-                id="company-details-2-status"
-              >
-                <strong class="govuk-tag govuk-tag--blue"> Incomplete </strong>
+              <div class="govuk-task-list__status" id="address-2-status">
+                <strong class="govuk-tag govuk-tag--grey"> Incomplete </strong>
               </div>
             </li>
           </ul>

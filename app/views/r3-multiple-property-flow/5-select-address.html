@@ -22,86 +22,30 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       </p>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend">Select an address</legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="2 Logg Way, Birmingham, BG13 1HN"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive"
-              >
-                2 Logg Way, Birmingham, BG13 1HN
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-2"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="3 Logg Way, Birmingham, BG13 1HN"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-2"
-              >
-                3 Logg Way, Birmingham, BG13 1HN
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-3"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="4 Logg Way, Birmingham, BG13 1HN"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-3"
-              >
-                4 Logg Way, Birmingham, BG13 1HN
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-4"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="5 Logg Way, Birmingham, BG13 1HN"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-4"
-              >
-                5 Logg Way, Birmingham, BG13 1HN
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-4"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="6 Logg Way, Birmingham, BG13 1HN"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-4"
-              >
-                6 Logg Way, Birmingham, BG13 1HN
-              </label>
-            </div>
-          </div>
-        </fieldset>
+        <label class="govuk-label" for="r3-whereDoYouLive">
+          Select an address
+        </label>
+        <select
+          class="govuk-select"
+          id="r3-whereDoYouLive"
+          name="r3-whereDoYouLive"
+        >
+          <option value="2 Logg Way, Birmingham, BG13 1HN">
+            2 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="3 Logg Way, Birmingham, BG13 1HN" selected>
+            3 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="4 Logg Way, Birmingham, BG13 1HN">
+            4 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="5 Logg Way, Birmingham, BG13 1HN">
+            5 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="6 Logg Way, Birmingham, BG13 1HN">
+            6 Logg Way, Birmingham, BG13 1HN
+          </option>
+        </select>
       </div>
 
       {{ govukButton({ text: "Continue" }) }}

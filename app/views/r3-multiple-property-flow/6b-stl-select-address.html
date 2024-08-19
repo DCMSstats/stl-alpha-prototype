@@ -20,88 +20,31 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       <p class="govuk-body">
         <strong>{{data['r3-postcode'] or "SW13 4AE"}}</strong>
       </p>
-
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend">Select an address</legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="123 Hill Lane, London, SW13 4AE"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive"
-              >
-                123 Hill Lane, London, SW13 4AE
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-2"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="124 Hill Lane, London, SW13 4AE"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-2"
-              >
-                124 Hill Lane, London, SW13 4AE
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-3"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="125 Hill Lane, London, SW13 4AE"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-3"
-              >
-                125 Hill Lane, London, SW13 4AE
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-4"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="126 Hill Lane, London, SW13 4AE"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-4"
-              >
-                126 Hill Lane, London, SW13 4AE
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input
-                class="govuk-radios__input"
-                id="r3-whereDoYouLive-4"
-                name="r3-whereDoYouLive"
-                type="radio"
-                value="127 Hill Lane, London, SW13 4AE"
-              />
-              <label
-                class="govuk-label govuk-radios__label"
-                for="r3-whereDoYouLive-4"
-              >
-                127 Hill Lane, London, SW13 4AE
-              </label>
-            </div>
-          </div>
-        </fieldset>
+        <label class="govuk-label" for="r3-whereDoYouLive">
+          Select an address
+        </label>
+        <select
+          class="govuk-select"
+          id="r3-whereDoYouLive"
+          name="r3-whereDoYouLive"
+        >
+          <option value="123 Hill Lane, London, SW13 4AE">
+            123 Hill Lane, London, SW13 4AE
+          </option>
+          <option value="124 Hill Lane, London, SW13 4AE" selected>
+            124 Hill Lane, London, SW13 4AE
+          </option>
+          <option value="125 Hill Lane, London, SW13 4AE">
+            125 Hill Lane, London, SW13 4AE
+          </option>
+          <option value="126 Hill Lane, London, SW13 4AE">
+            126 Hill Lane, London, SW13 4AE
+          </option>
+          <option value="127 Hill Lane, London, SW13 4AE">
+            127 Hill Lane, London, SW13 4AE
+          </option>
+        </select>
       </div>
 
       {{ govukButton({ text: "Continue" }) }}
