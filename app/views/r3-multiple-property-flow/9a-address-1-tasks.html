@@ -160,7 +160,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
             </div>
             <div class="govuk-form-group">
               <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-part-dwelling">
-                <strong>How many bedrooms are there in the property? (Part dwelling)</strong>
+                How many bedrooms are there in the property? (Part dwelling)
               </label>
               <input
                 class="govuk-input govuk-input--width-2"
@@ -176,62 +176,123 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           </a>
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guests">
-          <h2 class="govuk-heading-l">Guests</h2>
-          <table class="govuk-table">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Case manager</th>
-                <th scope="col" class="govuk-table__header">Cases opened</th>
-                <th scope="col" class="govuk-table__header">Cases closed</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">David Francis</td>
-                <td class="govuk-table__cell">98</td>
-                <td class="govuk-table__cell">95</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Paul Farmer</td>
-                <td class="govuk-table__cell">122</td>
-                <td class="govuk-table__cell">131</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Rita Patel</td>
-                <td class="govuk-table__cell">126</td>
-                <td class="govuk-table__cell">142</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Guests</h2>
+    
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in the details if applicable
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="guests-full-dwelling">
+               What is the maximum number of guests that the property can accommodate at one time? (Full dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="guests-full-dwelling"
+                name="guests-full-dwelling"
+                type="number"
+                autocomplete="guests-full-dwelling"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="guests-part-dwelling">
+                What is the maximum number of guests that the property can accommodate at one time? (Part dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="guests-part-dwelling"
+                name="guests-part-dwelling"
+                type="number"
+                autocomplete="guests-part-dwelling"
+              />
+            </div>
+          </fieldset>
+          <a href="#management-agency" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="management-agency">
-          <h2 class="govuk-heading-l">Management agency</h2>
-          <table class="govuk-table">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Case manager</th>
-                <th scope="col" class="govuk-table__header">Cases opened</th>
-                <th scope="col" class="govuk-table__header">Cases closed</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">David Francis</td>
-                <td class="govuk-table__cell">1380</td>
-                <td class="govuk-table__cell">1472</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Paul Farmer</td>
-                <td class="govuk-table__cell">1129</td>
-                <td class="govuk-table__cell">1083</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Rita Patel</td>
-                <td class="govuk-table__cell">1539</td>
-                <td class="govuk-table__cell">1265</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Management agency</h2>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in your management agency details (if applicable)
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-name"
+                >Name of management agency</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-name"
+                name="r3-agency-details"
+                type="text"
+                value="Hiltonz"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agent-name">Name of agent</label>
+              <input
+                class="govuk-input"
+                id="r3-agent-name"
+                name="r3-agency-details"
+                type="text"
+                value="John Doe"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-email"
+                >Contact email address</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-email"
+                name="r3-agency-details"
+                type="email"
+                spellcheck="false"
+                aria-describedby="email-hint"
+                autocomplete="email"
+                value="john.doe@example.com"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-telephone"
+                >Contact telephone number</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-telephone-number"
+                name="r3-agency-details"
+                type="tel"
+                autocomplete="tel"
+                value="01234 567891"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-address"
+                >Correspondence address</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-address"
+                name="r3-agency-details"
+                type="text"
+                value="123 Rag Lane"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-postcode">Postcode</label>
+              <input
+                class="govuk-input"
+                id="r3-agency-postcode"
+                name="r3-agency-details"
+                type="text"
+                value="SW15 2SR"
+              />
+            </div>
+          </fieldset>
+          <a href="#compliance" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
           <h2 class="govuk-heading-l">Compliance</h2>
