@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} STL Register Data - Hove {% endblock %} {% block
+beforeContent %} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="">
+    <h1 class="govuk-heading-xl">Data for Hove</h1>
+    {{ govukTable({
+  caption: "Hove, BN3",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Period"
+    },
+    {
+      text: "Number of Units",
+      format: "numeric"
+    },
+    {
+      text: "Number of beds",
+      format: "numeric"
+    },
+    {
+      text: "Number of Operators",
+      format: "numeric"
+    },
+    {
+      text: "Number of whole properties",
+      format: "numeric"
+    },
+    {
+      text: "Number of rooms in shared properties",
+      format: "numeric"
+    },
+    {
+      text: "Number of other units",
+      format: "numeric"
+    },
+    {
+      text: "Average number of nights per year",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "January 2024"
+      },
+      {
+        text: "455",
+        format: "numeric"
+      },
+      {
+        text: "1358",
+        format: "numeric"
+      },
+      {
+        text: "329",
+        format: "numeric"
+      },
+      {
+        text: "251",
+        format: "numeric"
+      },
+      {
+        text: "130",
+        format: "numeric"
+      },
+      {
+        text: "64",
+        format: "numeric"
+      },
+      {
+        text: "97.6",
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
+
+    <form action="/confirmation" method="post" novalidate>
+      {{ govukButton({"text": "Return", "href":
+      "/property-info/home-address-confirmation"}) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

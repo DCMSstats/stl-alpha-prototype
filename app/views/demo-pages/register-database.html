@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Register Page - 2 Logg Way {% endblock %} {% block
+beforeContent %} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">2 Logg Way, Birmingham</h1>
+    {{
+      govukSummaryList({ classes: "govuk-!-margin-bottom-9", rows: [
+    {
+        key: {
+            text: "Property address"
+        }
+        ,
+        value: {
+            html: "2 Logg Way<br/> Birmingham <br/> BG13 1HN"
+        }
+    },
+    {
+        key: {
+            text: "Property type"
+        }
+        ,
+        value: {
+            text: "Whole Residence"
+        }
+    },
+    {
+        key: {text: "Operator"},
+        value: {
+            text: "Sarah Phillips"
+        }
+    },
+    {
+        key: {
+            text: "Operator email"
+        },
+        value: {
+            html: '<p class = "govuk-body" > sarah.phillips@example.com</p>'
+        }
+    },
+    {
+        key: {
+            text: "Operator phone number"
+        },
+        value: {
+            html: '<p class = "govuk-body" > 07700 900457 </p>'
+        }
+    },
+    {
+        key: {
+            text: "Public liability insurance"
+        },
+        value: {
+            text: 'Provided'
+        }
+    },
+    {
+        key: {
+            text: "Gas safety certificate"
+        },
+        value: {
+            text: 'Provided'
+        }
+    },
+    {
+        key: {
+            text: "Fire risk assessment"
+        },
+        value: {
+            text: 'Not provided'
+        }
+    },
+    {
+        key: {
+            text: "Food hygiene rating"
+        },
+        value: {
+            text: 'Not applicable'
+        }
+    },
+    {
+        key: {
+            text: "Registration Expiry"
+        },
+        value: {
+            text: '24th August 2025'
+        }
+    }
+] }) }}
+    <form action="/confirmation" method="post" novalidate>
+      {{ govukButton({"text": "Return", "href":
+      "/property-info/home-address-confirmation"}) }}
+    </form>
+  </div>
+</div>
+{% endblock %}
