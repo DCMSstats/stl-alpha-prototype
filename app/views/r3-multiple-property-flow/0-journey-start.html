@@ -1,0 +1,115 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Start page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block beforeContent %} {{
+govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service - your
+<a class="govuk-link" href="#">feedback </a> will help us improve it.' }) }} {%
+endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+    Apply online to register a new property/ properties as a short-term let in
+    England
+  </h1>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">
+      Short-term letting is when a residential property is rented out (or let)
+      for a period of less than 90 nights.
+    </p>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        Operating without a short-term let license is now a civil offence. From
+        1st January 2026 you will need to prove your registration status to list
+        your property on booking platforms.
+      </strong>
+    </div>
+    <p class="govuk-body">
+      Registration includes confirming that you are complying with the necessary
+      regulations.
+    </p>
+    <p class="govuk-body">
+      Once registered, you will receive a registration number and digital badge
+      that you can display when advertising your property. The requirement to
+      register short-term let properties will ensure that all short-term let
+      operators know about, and meet, the required safety and planning
+      regulations.
+    </p>
+    <h2 class="govuk-heading-m">
+      Who qualifies to complete the short-term let registration:
+    </h2>
+    <ul class="govuk-body">
+      <li>Owners of a single short-term let property</li>
+      <li>Owners of multiple short-term let properties</li>
+      <li>Someone registering on behalf of a property owner</li>
+      <li>Management agency</li>
+    </ul>
+    <h2 class="govuk-heading-m">Before you start</h2>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check the type of dwelling that needs registration
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        More information will be provided here on dwellings that require
+        registration
+      </div>
+    </details>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          See the full list of documents/certificates that you will need
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul>
+          <li>Fire risk assessments</li>
+          <li>Gas safety certificates (where applicable)</li>
+          <li>Electrical & product safety</li>
+        </ul>
+      </div>
+    </details>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check what happens to my data
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        More information will be provided here on how we use your data.
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-m">How much it will cost</h2>
+    <p class="govuk-body">
+      Each application costs £45 per property. You can pay by MasterCard, Visa,
+      Electron or Delta debit or credit card.
+    </p>
+    <h2 class="govuk-heading-m">How long it takes</h2>
+    <p class="govuk-body">
+      You’ll usually get a response within 5 weeks from submission.
+    </p>
+    {{ govukButton({"text": "Start registration now", "href":
+    "/personal-info/initial-declaration", "isStartButton": true}) }}
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Related content</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="/"> Short-term let registration: detailed information</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}
