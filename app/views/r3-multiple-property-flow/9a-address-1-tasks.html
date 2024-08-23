@@ -5,17 +5,37 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 }} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
 }} {% endblock %} {% block content %}
 
-<div class="govuk-grid-row">
-  <p class="govuk-hint">Section 4 of 6</p>
-  <h1 class="govuk-heading-l">
+
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+<p class="govuk-hint">Section 4 of 6</p>
+</div>
+
+<div class="govuk-grid-row ">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
     {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
   </h1>
-  <div class="govuk-grid-row">
-    <h2 class="govuk-heading-m govuk-grid-column-two-thirds">Registration number</h2>
-    <p><strong class="govuk-tag govuk-tag--blue">
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-grid-column-two-thirds govuk-!-padding-left-0">Registration number</h2>
+    <p class="govuk-grid-column-one-third"><strong class="govuk-tag govuk-tag--blue">
       Pending
     </strong></p>
   </div>
+</div>
+
+<div class="govuk-grid-row">
+  
   <div class="govuk-grid-column-full-width">
     <form class="form" action="/path/of/next/page" method="post"></form>
       <div class="govuk-tabs" data-module="govuk-tabs">
@@ -552,6 +572,4 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 </div>
 
 {% endblock %}
-{% block pageScripts %}
-  <script src="/public/javascripts/application.js"></script>
-{% endblock %}
+

@@ -11,7 +11,7 @@ improve it.' }) }} {{ govukBackLink({ text: "Back", href:
       Review your short-term let property addresses
     </h1>
     <form
-      action="/r3-multiple-property-flow/9-properties-task-page"
+      action="/r3-multiple-property-flow/9-properties-task-page#list-of-properties"
       method="post"
       novalidate
     >
@@ -53,6 +53,13 @@ improve it.' }) }} {{ govukBackLink({ text: "Back", href:
 
       {{ govukButton({"text": "Continue"}) }}
     </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
   </div>
 </div>
 {% endblock %}
