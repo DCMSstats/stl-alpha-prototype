@@ -81,249 +81,129 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </ul>
 
 <!-- Accomodation tab -->
-
         <div class="govuk-tabs__panel" id="accommodation-type">
           <h2 class="govuk-heading-l">Type of accommodation</h2>
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="home-letting-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Home letting
-              </legend>
-              
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-letting" name="home-letting" type="checkbox" value="House">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-letting">
-                    House
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-letting-2" name="home-letting" type="checkbox" value="Cottage">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-2">
-                    Cottage
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-letting-3" name="home-letting" type="checkbox" value="Flat">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-3">
-                    Flat
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-letting-4" name="home-letting" type="checkbox" value="Bungalow">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-4">
-                    Bungalow
-                  </label>
-                </div>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Home Letting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['home-letting'] or "Flat"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#accomodation-type">Change<span class="govuk-visually-hidden"> accommodation type</span></a>
+                </dd>
               </div>
-              <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
-               Home sharing
-              </legend>
-              
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-sharing" name="home-sharing" type="checkbox" value="Single room">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing">
-                    Single room
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="home-sharing-2" name="home-sharing" type="checkbox" value="Converted garage">
-                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing-2">
-                    Converted garage
-                  </label>
-                </div>
-
-                <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
-                  Other
-                 </legend>
-                 
-                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                   <div class="govuk-checkboxes__item">
-                     <input class="govuk-checkboxes__input" id="accommodation-type-other" name="accommodation-type-other" type="checkbox" value="Tree house">
-                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other">
-                       Tree house
-                     </label>
-                   </div>
-                   <div class="govuk-checkboxes__item">
-                     <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Gate house">
-                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
-                       Gate house
-                     </label>
-                   </div>
-                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Farm house">
-                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
-                      Farm house
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Not included in the above">
-                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
-                      Not included in the above
-                    </label>
-                  </div>
-                  <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#accomodation-type" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
-                    Save and continue
-                  </a>
-            </fieldset>
+            </dl>
           </div>
         </div>
 
-<!-- Bedroom tab -->
-
+<!-- Bedrooms tab -->
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="bedroom-number">
-          <h2 class="govuk-heading-l">Bedroom number</h2>
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-full-dwelling">
-               How many bedrooms are there in the property?
-              </label>
-              <input
-                class="govuk-input govuk-input--width-2"
-                id="bedrooms-full-dwelling"
-                name="bedrooms-full-dwelling"
-                type="number"
-                autocomplete="bedrooms-full-dwelling"
-              />
-            </div>
-          </fieldset>
-          <div class="govuk-button-group">
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#bedroom-number" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-              Save
-            </a>
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#bedroom-number" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Clear
-            </a>
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Bedroom number</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of bedrooms
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['bedrooms-full-dwelling'] or "2"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#bedroom-number">Change<span class="govuk-visually-hidden"> bedroom details</span></a>
+                </dd>
+              </div>
+            </dl>
           </div>
-          
         </div>
 
-<!-- Guests tab -->
+ <!-- Guests tab -->
 
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guests">
-          <h2 class="govuk-heading-l">Number of guests</h2>
-    
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="guests-full-dwelling">
-               What is the maximum number of guests that the property can accommodate in its current layout?
-              </label>
-              <input
-                class="govuk-input govuk-input--width-2"
-                id="guests-full-dwelling"
-                name="guests-full-dwelling"
-                type="number"
-                autocomplete="guests-full-dwelling"
-              />
-            </div>
-          </fieldset>
-          <div class="govuk-button-group">
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#guests" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-              Save
-            </a>
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#guests" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Clear
-            </a>
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Guests</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of guests allowed
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['bedrooms-full-dwelling'] or "4"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#guests">Change<span class="govuk-visually-hidden"> guest number</span></a>
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
 
-<!-- Management agency tab -->
-
+ <!-- Management agency tab -->
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="management-agency">
-          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Management agency</h2>
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-hint govuk-!-margin-bottom-4">
-              Please fill in your management agency details (if applicable)
-            </legend>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agency-name"
-                >Name of management agency</label
-              >
-              <input
-                class="govuk-input"
-                id="r3-agency-name"
-                name="r3-agency-details"
-                type="text"
-                value="Hiltonz"
-              />
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agent-name">Name of agent</label>
-              <input
-                class="govuk-input"
-                id="r3-agent-name"
-                name="r3-agency-details"
-                type="text"
-                value="John Doe"
-              />
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agency-email"
-                >Contact email address</label
-              >
-              <input
-                class="govuk-input"
-                id="r3-agency-email"
-                name="r3-agency-details"
-                type="email"
-                spellcheck="false"
-                aria-describedby="email-hint"
-                autocomplete="email"
-                value="john.doe@example.com"
-              />
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agency-telephone"
-                >Contact telephone number</label
-              >
-              <input
-                class="govuk-input"
-                id="r3-agency-telephone-number"
-                name="r3-agency-details"
-                type="tel"
-                autocomplete="tel"
-                value="01234 567891"
-              />
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agency-address"
-                >Correspondence address</label
-              >
-              <input
-                class="govuk-input"
-                id="r3-agency-address"
-                name="r3-agency-details"
-                type="text"
-                value="123 Rag Lane"
-              />
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="r3-agency-postcode">Postcode</label>
-              <input
-                class="govuk-input"
-                id="r3-agency-postcode"
-                name="r3-agency-details"
-                type="text"
-                value="SW15 2SR"
-              />
-            </div>
-          </fieldset>
-          <div class="govuk-button-group">
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#management-agency" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-              Save
-            </a>
-            <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#management-agency" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Clear
-            </a>
-            <a href="/r3-multiple-property-flow/9a-address-1-tasks#compliance" role="button" draggable="false"  data-module="govuk-button">
-              Skip
-            </a>
+          <h2 class="govuk-heading-l">Management agency</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name of management agency
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Hiltonz
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#management-agency">Change<span class="govuk-visually-hidden"> agency name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name of agent
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John Doe
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#management-agency">Change<span class="govuk-visually-hidden"> agent name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  johndoe@example.com
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#management-agency">Change<span class="govuk-visually-hidden"> contact email</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact telephone number
+                <dd class="govuk-summary-list__value">
+                  01234 567 891
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#management-agency">Change<span class="govuk-visually-hidden"> contact number</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Correspondence address
+                <dd class="govuk-summary-list__value">
+                  123 Rag Lane, London, SW15 2SR
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-multiple-property-flow/9a-address-1-tasks#management-agency">Change<span class="govuk-visually-hidden"> correspondence address</span></a>
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
 
 <!-- Compliance tab -->
-
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
           <h2 class="govuk-heading-l">Compliance</h2>
           
@@ -459,7 +339,6 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </div>
 
 <!-- Other tab -->
-
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other">
           <h2 class="govuk-heading-l">Required Data</h2>
           <fieldset class="govuk-fieldset">
@@ -567,7 +446,6 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           </fieldset>
           
         </div>
-
 <!-- Payments tab -->
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments">
           <h2 class="govuk-heading-l">Payments</h2>

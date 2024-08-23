@@ -6,6 +6,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 "javascript:window.history.back()"}) }} {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 2 of 6</p>
     <h1 class="govuk-heading-l">
       Is the address of the short-term rental property the same as your current
       home address?
@@ -14,7 +15,6 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       {{ data['r3-whereDoYouLive'] or "2 Logg Way, Birmingham, BG13 1HN"}}
     </div>
     <form class="form" action="/r3-different-address" method="post">
-      <p class="govuk-hint">Section 2 of 6</p>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
