@@ -6,6 +6,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
+  <p class="govuk-hint">Section 4 of 6</p>
   <h1 class="govuk-heading-l">
     {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
   </h1>
@@ -48,8 +49,8 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
             </a>
           </li>
           <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#data">
-              Data
+            <a class="govuk-tabs__tab" href="#other">
+              Other
             </a>
           </li>
           <li class="govuk-tabs__list-item">
@@ -427,12 +428,12 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
             </div>
           </details>
         </div>
-    {{ govukButton({"text": "Save and continue", "href": "#data"})
+    {{ govukButton({"text": "Save and continue", "href": "#other"})
     }} {{ govukButton({ "text": "Upload later", "href":
-    "#data", "classes": "govuk-button--secondary" }) }}
+    "#other", "classes": "govuk-button--secondary" }) }}
           
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="data">
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other">
           <h2 class="govuk-heading-l">Required Data</h2>
           <fieldset class="govuk-fieldset">
             <div class="govuk-form-group">

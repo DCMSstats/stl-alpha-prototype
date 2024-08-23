@@ -7,31 +7,33 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-hint">Section 2 of 6</p>
-    <h1 class="govuk-heading-l">Add your current home address</h1>
+    <p class="govuk-hint">Section 1 of 6</p>
 
     <form
       class="form"
-      action="/r3-multiple-property-flow/5-select-address"
+      action="/r3-multiple-property-flow/0e-save-progress-confirmation"
       method="post"
     >
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="r3-postcode">
-            What is the postcode?
+          <label class="govuk-label govuk-label--l" for="confirm-email">
+            Confirm email
           </label>
         </h1>
-        <div id="owner-name-hint" class="govuk-hint">
-          Postcode example: SK10 6NL
+        <div id="confirm-email-hint" class="govuk-hint">
+          Check the email you have chosen is correct. If it is wrong, you can
+          re-type it here.
         </div>
         <input
-          class="govuk-input govuk-input--width-10"
-          id="r3-postcode"
-          name="r3-postcode"
+          class="govuk-input govuk-!-width-two-thirds"
+          id="confirm-email"
+          name="eventName"
           type="text"
+          aria-describedby="confirm-email-hint"
         />
       </div>
-      {{ govukButton({ text: "Find address" }) }}
+
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>

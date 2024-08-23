@@ -9,21 +9,9 @@ Prototype Kit {% endblock %} {% block header %}
 </script>
 {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text:
 "Alpha" }, html: 'This is a new service - your
-<a class="govuk-link" href="#">feedback </a> will help us improve it.' }) }}
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-    </li>
-    <!-- <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Section</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link">Subsection</a>
-    </li> -->
-  </ol>
-</div>
-{% endblock %} {% block content %}
+<a class="govuk-link" href="#">feedback </a> will help us improve it.' }) }} {{
+govukBackLink({ text: "Back", href: "javascript:window.history.back()" }) }}{%
+endblock %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -321,14 +309,8 @@ Prototype Kit {% endblock %} {% block header %}
         </li>
       </ol>
     </div>
-    <button
-      type="submit"
-      class="govuk-button"
-      data-module="govuk-button"
-      href="/r3-multiple-property-flow/0b-initial-declaration"
-    >
-      Continue to declaration
-    </button>
+    {{ govukButton({ text: "Continue to declaration",
+    href:"/r3-multiple-property-flow/0b-initial-declaration" }) }}
   </div>
 </div>
 
