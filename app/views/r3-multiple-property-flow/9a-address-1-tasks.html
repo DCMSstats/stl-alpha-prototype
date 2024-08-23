@@ -325,9 +325,8 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <!-- Compliance tab -->
 
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
-          <h2 class="govuk-heading-l">Compliance</h2>
-          
-    
+          <h2 class="govuk-heading-l">Compliance details</h2>
+          <p class="govuk-hint">You will be required to provide supporting documents as proof of compliance on the following page.</p>
         
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="gas-safety-hint">
@@ -403,6 +402,36 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
             </details>
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h3 class="govuk-fieldset__heading">
+                Does the short-term rental comply with the relevant furniture fire safety standards for this type of accommodation?
+              </h3>
+            </legend>
+    
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="furniture-fire-safety" name="furniture-fire-safety" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="furniture-fire-safety">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="furniture-fire-safety-2" name="furniture-fire-safety" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="furniture-fire-safety-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >How can I comply with current electrical safety regulations for short-term rental accommodation in England?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Information on how you can comply would be shown here.
+              </div>
+            </details>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
                 Does the short-term rental comply with the relevant electrical safety standards for this type of accommodation?
               </h3>
             </legend>
@@ -432,142 +461,160 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
               </div>
             </details>
           </fieldset>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="gas-upload">Upload a file</label>
-            <input
-              class="govuk-file-upload"
-              id="gas-upload"
-              name="gasUpload"
-              type="file"
-            />
-          </div>
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text"
-                >Types of file you can upload</span
-              >
-            </summary>
-            <div class="govuk-details__text">
-              You can upload the following file formats jpg, png, pdf, HEIC
-            </div>
-          </details>
+          
         </div>
-    {{ govukButton({"text": "Save and continue", "href": "#other"})
-    }} {{ govukButton({ "text": "Upload later", "href":
-    "#other", "classes": "govuk-button--secondary" }) }}
+        <div class="govuk-button-group">
+          <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Save
+          </a>
+          <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Clear
+          </a>
+        </div>
           
         </div>
 
 <!-- Other tab -->
 
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other">
-          <h2 class="govuk-heading-l">Required Data</h2>
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-fieldset__legend--s" for="present-occupation">
-                How many nights has the property been occupied for this year (Jan 2024 -now)?
-              </label>
-              <input
-                class="govuk-input govuk-input--width-10"
-                id="present-occupation"
-                name="present-occupation"
-                type="text"
-                autocomplete="present-occupation"
-              />
-            </div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other">
+  <h2 class="govuk-heading-l">Other required information</h2>
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-fieldset__legend--s" for="present-occupation">
+        How many nights has the property been occupied for this year (Jan 2024 -now)?
+      </label>
+      <input
+        class="govuk-input govuk-input--width-10"
+        id="present-occupation"
+        name="present-occupation"
+        type="text"
+        autocomplete="present-occupation"
+      />
+    </div>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-fieldset__legend--s" for="previous-occupation">
-                How many nights was the property occupied for last year (Jan 2023 - Dec 2023)?
-              </label>
-              <input
-                class="govuk-input govuk-input--width-10"
-                id="previous-occupation"
-                name="previous-occupation"
-                type="text"
-                autocomplete="previous-occupation"
-              />
-            </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-fieldset__legend--s" for="previous-occupation">
+        How many nights was the property occupied for last year (Jan 2023 - Dec 2023)?
+      </label>
+      <input
+        class="govuk-input govuk-input--width-10"
+        id="previous-occupation"
+        name="previous-occupation"
+        type="text"
+        autocomplete="previous-occupation"
+      />
+    </div>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-fieldset__legend--s" for="exemptions">
-                Does this property have any exemptions? If yes, please note the number of days.
-              </label>
-              <input
-                class="govuk-input govuk-input--width-10"
-                id="exemptions"
-                name="exemptions"
-                type="text"
-                autocomplete="exemptions"
-              />
-            </div>
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text"
-                  >What counts as an exemption?</span
-                >
-              </summary>
-              <div class="govuk-details__text">
-                Details on what counts as an exemption would be shown here.
-              </div>
-            </details>
-            
-            <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
-              <h1 class="govuk-label-wrapper">
-                <label class="govuk-label govuk-label--s" for="with-hint">
-                  Does this property meet any accessibility needs?
-                </label>
-              </h1>
-              <div id="with-hint-hint" class="govuk-hint">
-                For example, step free access, wheelchair accessible bathroom/wet rooms
-              </div>
-              <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-              <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-                You can enter up to 200 characters
-              </div>
-            </div>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="planning-permission">
-                If the property is in London, has planning permission been granted or is it not required?
-              </label>
-              <select class="govuk-select" id="planning-permission" name="planning-permission">
-                <option value="blank" selected></option>
-                <option value="yes">Yes</option>
-                <option value="not-required" >Not required</option>
-              </select>
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="data-upload">Upload a file</label>
-              <input
-                class="govuk-file-upload"
-                id="data-upload"
-                name="dataUpload"
-                type="file"
-              />
-            </div>
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text"
-                  >What can I upload as proof?</span
-                >
-              </summary>
-              <div class="govuk-details__text">
-                Details of what can be uploaded as proof will be shown here.
-              </div>
-            </details>
-            <div class="govuk-button-group">
-              <a href="/pay/payment-summary" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
-                Continue to payment
-              </a>
-              <a class="govuk-link" href="/r3-multiple-property-flow/9-properties-task-page">Add details to another property</a>
-            </div>
-            
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            If the property is in London, do you have planning permission if it is required?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+              Yes
+            </label>
           </div>
-          </fieldset>
-          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              This property is not in London
+            </label>
+          </div>
         </div>
+      </fieldset>
+     
+    </div>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >What are the planning permission requirements in London?</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        Details on what the planning permission requirents are will be shown here.
+      </div>
+    </details>
 
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-fieldset__legend--s" for="exemptions">
+        Does this property have any exemptions? If yes, please note the number of days.
+      </label>
+      <input
+        class="govuk-input govuk-input--width-10"
+        id="exemptions"
+        name="exemptions"
+        type="text"
+        autocomplete="exemptions"
+      />
+    </div>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >What counts as an exemption?</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        Details on what counts as an exemption would be shown here.
+      </div>
+    </details>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--s" for="data-upload">Upload your proof of exemption</label>
+      <input
+        class="govuk-file-upload"
+        id="data-upload"
+        name="dataUpload"
+        type="file"
+      />
+      
+    </div>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >What can I upload as proof?</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        Details on what can be uploaded as proof would be shown here.
+      </div>
+    </details>
+   
+    
+    <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="with-hint">
+          Does this property meet any accessibility needs?
+        </label>
+      </h1>
+      <div id="with-hint-hint" class="govuk-hint">
+        For example, step free access, wheelchair accessible bathroom/wet rooms
+      </div>
+      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+      <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+        You can enter up to 200 characters
+      </div>
+    </div>
+    <div class="govuk-button-group">
+      <a href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#other" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+        Save
+      </a>
+      <a class="govuk-button govuk-button--secondary" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#other">Clear</a>
+    </div>
+    
+  </div>
+  </fieldset>
+  
+</div>
 <!-- Payments tab -->
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments">
           <h2 class="govuk-heading-l">Payments</h2>

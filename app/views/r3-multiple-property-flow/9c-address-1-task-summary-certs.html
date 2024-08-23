@@ -1,0 +1,218 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+<p class="govuk-hint">Section 4 of 6</p>
+</div>
+
+<div class="govuk-grid-row ">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+    {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+  </h1>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-grid-column-two-thirds govuk-!-padding-left-0">Registration number</h2>
+    <p class="govuk-grid-column-one-third"><strong class="govuk-tag govuk-tag--blue">
+      Pending
+    </strong></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-full-width">
+    <form class="form" action="/path/of/next/page" method="post"></form>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#accommodation-type">
+              Accommodation type
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#bedroom-number">
+              Bedrooms
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#guests">
+              Guests
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#management-agency">
+              Management agency
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#compliance">
+              Compliance
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#other">
+              Other
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#payments">
+              Payments
+            </a>
+          </li> -->
+        </ul>
+
+<!-- Accomodation tab -->
+        <div class="govuk-tabs__panel" id="accommodation-type">
+          <h2 class="govuk-heading-l">Type of accommodation</h2>
+          
+        </div>
+
+<!-- Bedrooms tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="bedroom-number">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Bedroom number</h2>
+          
+        </div>
+
+ <!-- Guests tab -->
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guests">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Guests</h2>
+          
+        </div>
+
+ <!-- Management agency tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="management-agency">
+          <h2 class="govuk-heading-l">Management agency</h2>
+          
+        </div>
+
+<!-- Compliance tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
+          <h2 class="govuk-heading-l">Compliance Details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Gas in the property
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> gas in the property</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Fire safety regulation met
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> fire safety regulation</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Furniture Fire safety regulations met 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> furniture fire safety regulation</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Electrical safety regulations met 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> electrical safety regulation</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Gas safety certificate 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                gsc2024.jpg
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> gas safety upload</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Fire Risk Assessment evidence
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">firerisk2024page1.jpg</p>
+                <p class="govuk-body">firerisk2024page2.jpg</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> fire risk upload 1</span></a>
+                  </li>
+              
+                </ul>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Electrical Installation Condition Report (EICR) 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                esc2024.jpg
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/r3-multiple-property-flow/9b-address-1-task-summary-screens#compliance">Change<span class="govuk-visually-hidden"> electrical safety upload</span></a>
+              </dd>
+            </div>
+          </dl>
+          
+        </div>
+
+<!-- Other tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other">
+          <h2 class="govuk-heading-l">Required Data</h2>
+          
+          
+        </div>
+<!-- Payments tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments">
+          <h2 class="govuk-heading-l">Payments</h2>
+          
+        </div>
+        
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
