@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Add your short-term let property address
+    </h1>
+    <div id="owner-name-hint" class="govuk-hint">
+      You can add multiple addresses
+    </div>
+    <form
+      class="form"
+      action="/r3-multiple-property-flow/6b-stl-select-address"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="r3-postcode">
+            What is the postcode of the property you are registering as a
+            short-term let?
+          </label>
+        </h1>
+        <div id="owner-name-hint" class="govuk-hint">Postcode</div>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="r3-postcode"
+          name="r3-postcode"
+          type="text"
+        />
+      </div>
+      {{ govukButton({ text: "Find address" }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

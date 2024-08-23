@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Is the address of the short-term rental property the same as your current
+      home address?
+    </h1>
+    <div class="govuk-inset-text">
+      {{ data['r3-whereDoYouLive'] or "2 Logg Way, Birmingham, BG13 1HN"}}
+    </div>
+    <form class="form" action="/r3-different-address" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="sameAddress"
+                name="r3sameAddress"
+                type="radio"
+                value="sameAddress"
+              />
+              <label class="govuk-label govuk-radios__label" for="sameAddress"
+                >Yes, it's the same address</label
+              >
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="differentAddress"
+                name="r3sameAddress"
+                type="radio"
+                value="differentAddress"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="differentAddress"
+                >No, it's a different address</label
+              >
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {{ govukButton({"text": "Continue"}) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

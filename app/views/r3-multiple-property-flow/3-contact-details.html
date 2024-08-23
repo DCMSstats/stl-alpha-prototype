@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form
+      class="form"
+      action="/r3-multiple-property-flow/4-postcode-lookup"
+      method="post"
+    >
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">Enter your contact details</h1>
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Enter your email address
+          </label>
+          <input
+            class="govuk-input govuk-input--width-20"
+            id="email-address"
+            name="email-address"
+            type="text"
+            autocomplete="email-address"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="phone-number">
+            Enter you phone number
+          </label>
+          <input
+            class="govuk-input govuk-input--width-20"
+            id="phone-number"
+            name="phone-number"
+            type="text"
+            autocomplete="phone-number"
+          />
+        </div>
+      </fieldset>
+
+      {{ govukButton({ text: "Continue" }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

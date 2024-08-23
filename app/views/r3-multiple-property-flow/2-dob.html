@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form
+      class="form"
+      action=" /r3-multiple-property-flow/3-contact-details"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          role="group"
+          aria-describedby="owner-dob-hint"
+        >
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">What is your date of birth?</h1>
+          </legend>
+          <div id="owner-dob-hint" class="govuk-hint">
+            For example, 31 3 1980
+          </div>
+          <div class="govuk-date-input" id="owner-dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="owner-dob-day"
+                >
+                  Day
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="owner-dob-day"
+                  name="owner-dob-day"
+                  type="text"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="owner-dob-month"
+                >
+                  Month
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="owner-dob-month"
+                  name="owner-dob-month"
+                  type="text"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="owner-dob-year"
+                >
+                  Year
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-4"
+                  id="owner-dob-year"
+                  name="owner-dob-year"
+                  type="text"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({ text: "Continue" }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

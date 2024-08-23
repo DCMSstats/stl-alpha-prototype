@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Add your current home address</h1>
+
+    <form
+      class="form"
+      action="/r3-multiple-property-flow/5-select-address"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="r3-postcode">
+            What is the postcode?
+          </label>
+        </h1>
+        <div id="owner-name-hint" class="govuk-hint">
+          Postcode example: SK10 6NL
+        </div>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="r3-postcode"
+          name="r3-postcode"
+          type="text"
+        />
+      </div>
+      {{ govukButton({ text: "Find address" }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

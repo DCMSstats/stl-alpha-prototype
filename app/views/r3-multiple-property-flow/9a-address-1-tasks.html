@@ -1,0 +1,556 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-l">
+    {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+  </h1>
+  <div class="govuk-grid-row">
+    <h2 class="govuk-heading-m govuk-grid-column-two-thirds">Registration number</h2>
+    <p><strong class="govuk-tag govuk-tag--blue">
+      Pending
+    </strong></p>
+  </div>
+  <div class="govuk-grid-column-full-width">
+    <form class="form" action="/path/of/next/page" method="post"></form>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#accommodation-type">
+              Accommodation
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#bedroom-number">
+              Bedrooms
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#guests">
+              Guests
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#management-agency">
+              Management agency
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#compliance">
+              Compliance
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#data">
+              Data
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#payments">
+              Payments
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="accommodation-type">
+          <h2 class="govuk-heading-l">Type of accommodation</h2>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="home-letting-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Home letting
+              </legend>
+              
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting" name="home-letting" type="checkbox" value="House">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting">
+                    House
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-2" name="home-letting" type="checkbox" value="Cottage">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-2">
+                    Cottage
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-3" name="home-letting" type="checkbox" value="Flat">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-3">
+                    Flat
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-letting-4" name="home-letting" type="checkbox" value="Bungalow">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-letting-4">
+                    Bungalow
+                  </label>
+                </div>
+              </div>
+              <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+               Home sharing
+              </legend>
+              
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-sharing" name="home-sharing" type="checkbox" value="Single room">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing">
+                    Single room
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="home-sharing-2" name="home-sharing" type="checkbox" value="Converted garage">
+                  <label class="govuk-label govuk-checkboxes__label" for="home-sharing-2">
+                    Converted garage
+                  </label>
+                </div>
+
+                <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Other
+                 </legend>
+                 
+                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                   <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="accommodation-type-other" name="accommodation-type-other" type="checkbox" value="Tree house">
+                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other">
+                       Tree house
+                     </label>
+                   </div>
+                   <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Gate house">
+                     <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                       Gate house
+                     </label>
+                   </div>
+                   <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Farm house">
+                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                      Farm house
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Not included in the above">
+                    <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                      Not included in the above
+                    </label>
+                  </div>
+                  <a href="#bedroom-number" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+                    Save and continue
+                  </a>
+            </fieldset>
+          </div>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="bedroom-number">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Bedroom number</h2>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in the details if applicable
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-full-dwelling">
+               How many bedrooms are there in the property? (Full dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="bedrooms-full-dwelling"
+                name="bedrooms-full-dwelling"
+                type="number"
+                autocomplete="bedrooms-full-dwelling"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="bedrooms-part-dwelling">
+                How many bedrooms are there in the property? (Part dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="bedrooms-part-dwelling"
+                name="bedrooms-part-dwelling"
+                type="number"
+                autocomplete="bedrooms-part-dwelling"
+              />
+            </div>
+          </fieldset>
+          <a href="#guests" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guests">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Guests</h2>
+    
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in the details if applicable
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="guests-full-dwelling">
+               What is the maximum number of guests that the property can accommodate at one time? (Full dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="guests-full-dwelling"
+                name="guests-full-dwelling"
+                type="number"
+                autocomplete="guests-full-dwelling"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-fieldset__legend govuk-fieldset__legend--m" for="guests-part-dwelling">
+                What is the maximum number of guests that the property can accommodate at one time? (Part dwelling)
+              </label>
+              <input
+                class="govuk-input govuk-input--width-2"
+                id="guests-part-dwelling"
+                name="guests-part-dwelling"
+                type="number"
+                autocomplete="guests-part-dwelling"
+              />
+            </div>
+          </fieldset>
+          <a href="#management-agency" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="management-agency">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Management agency</h2>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-hint govuk-!-margin-bottom-4">
+              Please fill in your management agency details (if applicable)
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-name"
+                >Name of management agency</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-name"
+                name="r3-agency-details"
+                type="text"
+                value="Hiltonz"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agent-name">Name of agent</label>
+              <input
+                class="govuk-input"
+                id="r3-agent-name"
+                name="r3-agency-details"
+                type="text"
+                value="John Doe"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-email"
+                >Contact email address</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-email"
+                name="r3-agency-details"
+                type="email"
+                spellcheck="false"
+                aria-describedby="email-hint"
+                autocomplete="email"
+                value="john.doe@example.com"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-telephone"
+                >Contact telephone number</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-telephone-number"
+                name="r3-agency-details"
+                type="tel"
+                autocomplete="tel"
+                value="01234 567891"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-address"
+                >Correspondence address</label
+              >
+              <input
+                class="govuk-input"
+                id="r3-agency-address"
+                name="r3-agency-details"
+                type="text"
+                value="123 Rag Lane"
+              />
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="r3-agency-postcode">Postcode</label>
+              <input
+                class="govuk-input"
+                id="r3-agency-postcode"
+                name="r3-agency-details"
+                type="text"
+                value="SW15 2SR"
+              />
+            </div>
+          </fieldset>
+          <a href="#compliance" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+            Save and continue
+          </a>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
+          <h2 class="govuk-heading-l">Compliance</h2>
+          
+    
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="gas-safety-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
+                Does the short-term rental have gas in the property?
+              </h3>
+            </legend>
+    
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gas-safety" name="gas-safety" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="gas-safety">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gas-safety-2" name="gas-safety" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="gas-safety-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >How can I comply with current gas safety regulations for short-term rental accommodation in England?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Information on how you can comply would be shown here.
+              </div>
+            </details>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >I don't have a gas safety certificate, what should I do?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Information on how you can obtain a gas safety certificate would be shown here.
+              </div>
+            </details>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
+                Does the short-term rental comply with the relevant fire safety standards for this type of accommodation?
+              </h3>
+            </legend>
+    
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fire-safety" name="fire-safety" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="fire-safety">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fire-safety-2" name="fire-safety" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="fire-safety-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >How can I comply with current fire safety regulations for short-term rental accommodation in England?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Information on how you can comply would be shown here.
+              </div>
+            </details>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
+                Does the short-term rental comply with the relevant electrical safety standards for this type of accommodation?
+              </h3>
+            </legend>
+    
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="electrical-safety" name="electrical-safety" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="electrical-safety">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="electrical-safety-2" name="electrical-safety" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="electrical-safety-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >How can I comply with current electrical safety regulations for short-term rental accommodation in England?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Information on how you can comply would be shown here.
+              </div>
+            </details>
+          </fieldset>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="gas-upload">Upload a file</label>
+            <input
+              class="govuk-file-upload"
+              id="gas-upload"
+              name="gasUpload"
+              type="file"
+            />
+          </div>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text"
+                >Types of file you can upload</span
+              >
+            </summary>
+            <div class="govuk-details__text">
+              You can upload the following file formats jpg, png, pdf, HEIC
+            </div>
+          </details>
+        </div>
+    {{ govukButton({"text": "Save and continue", "href": "#data"})
+    }} {{ govukButton({ "text": "Upload later", "href":
+    "#data", "classes": "govuk-button--secondary" }) }}
+          
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="data">
+          <h2 class="govuk-heading-l">Required Data</h2>
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-fieldset__legend--s" for="present-occupation">
+                How many nights has the property been occupied for this year (Jan 2024 -now)?
+              </label>
+              <input
+                class="govuk-input govuk-input--width-10"
+                id="present-occupation"
+                name="present-occupation"
+                type="text"
+                autocomplete="present-occupation"
+              />
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-fieldset__legend--s" for="previous-occupation">
+                How many nights was the property occupied for last year (Jan 2023 - Dec 2023)?
+              </label>
+              <input
+                class="govuk-input govuk-input--width-10"
+                id="previous-occupation"
+                name="previous-occupation"
+                type="text"
+                autocomplete="previous-occupation"
+              />
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-fieldset__legend--s" for="exemptions">
+                Does this property have any exemptions? If yes, please note the number of days.
+              </label>
+              <input
+                class="govuk-input govuk-input--width-10"
+                id="exemptions"
+                name="exemptions"
+                type="text"
+                autocomplete="exemptions"
+              />
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >What counts as an exemption?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Details on what counts as an exemption would be shown here.
+              </div>
+            </details>
+            
+            <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--s" for="with-hint">
+                  Does this property meet any accessibility needs?
+                </label>
+              </h1>
+              <div id="with-hint-hint" class="govuk-hint">
+                For example, step free access, wheelchair accessible bathroom/wet rooms
+              </div>
+              <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+              <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+                You can enter up to 200 characters
+              </div>
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="planning-permission">
+                If the property is in London, has planning permission been granted or is it not required?
+              </label>
+              <select class="govuk-select" id="planning-permission" name="planning-permission">
+                <option value="blank" selected></option>
+                <option value="yes">Yes</option>
+                <option value="not-required" >Not required</option>
+              </select>
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="data-upload">Upload a file</label>
+              <input
+                class="govuk-file-upload"
+                id="data-upload"
+                name="dataUpload"
+                type="file"
+              />
+            </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text"
+                  >What can I upload as proof?</span
+                >
+              </summary>
+              <div class="govuk-details__text">
+                Details of what can be uploaded as proof will be shown here.
+              </div>
+            </details>
+            <div class="govuk-button-group">
+              <a href="/pay/payment-summary" role="button" draggable="false" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+                Continue to payment
+              </a>
+              <a class="govuk-link" href="/r3-multiple-property-flow/9-properties-task-page">Add details to another property</a>
+            </div>
+            
+          </div>
+          </fieldset>
+          
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments">
+          <h2 class="govuk-heading-l">Payments</h2>
+          
+        </div>
+        
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+{% block pageScripts %}
+  <script src="/public/javascripts/application.js"></script>
+{% endblock %}
