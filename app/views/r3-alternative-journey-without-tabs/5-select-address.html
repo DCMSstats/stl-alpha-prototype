@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 2 of 6</p>
+    <h1 class="govuk-heading-l">Add your current home address</h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/6-address-confirmation"
+      method="post"
+    >
+      <h2 class="govuk-heading-m">Select your property</h2>
+
+      <h3 class="govuk-body govuk-!-margin-0">Postcode</h3>
+      <p class="govuk-body">
+        <strong>{{data['r3-postcode'] or "BG13 1HN"}}</strong>
+      </p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="r3-whereDoYouLive">
+          Select an address
+        </label>
+        <select
+          class="govuk-select"
+          id="r3-whereDoYouLive"
+          name="r3-whereDoYouLive"
+        >
+          <option value="2 Logg Way, Birmingham, BG13 1HN">
+            2 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="3 Logg Way, Birmingham, BG13 1HN" selected>
+            3 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="4 Logg Way, Birmingham, BG13 1HN">
+            4 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="5 Logg Way, Birmingham, BG13 1HN">
+            5 Logg Way, Birmingham, BG13 1HN
+          </option>
+          <option value="6 Logg Way, Birmingham, BG13 1HN">
+            6 Logg Way, Birmingham, BG13 1HN
+          </option>
+        </select>
+      </div>
+
+      {{ govukButton({ text: "Continue" }) }}
+    </form>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">I cannot find my address on the list</a>
+    </p>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 2 of 6</p>
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/2-dob"
+      method="post"
+    >
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Provide the details of the property owner or owners
+          </h1>
+        </legend>
+        <div id="owner-name-hint" class="govuk-hint">
+          You can add up to 4 owners per property
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="title"> Title </label>
+          <input
+            class="govuk-input govuk-input--width-4"
+            id="title"
+            name="title"
+            type="text"
+            autocomplete="title"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="first-name"> First name </label>
+          <input
+            class="govuk-input govuk-input govuk-input--width-20"
+            id="first-name"
+            name="first-name"
+            type="text"
+            autocomplete="first-name"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="middle-name"> Middle name </label>
+          <input
+            class="govuk-input govuk-input--width-20"
+            id="middle-name"
+            name="middle-name"
+            type="text"
+            autocomplete="middle-name"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-name"> Last name </label>
+          <input
+            class="govuk-input govuk-input govuk-input--width-20"
+            id="last-name"
+            name="last-name"
+            type="text"
+            autocomplete="last-name"
+          />
+        </div>
+      </fieldset>
+
+      {{ govukButton({ text: "Save and continue" }) }}
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

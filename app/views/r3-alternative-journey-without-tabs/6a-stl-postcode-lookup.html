@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 3 of 6</p>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Add your short-term let property address
+    </h1>
+    <div id="owner-name-hint" class="govuk-hint">
+      You will be able to add multiple addresses
+    </div>
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/6b-stl-select-address"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="r3-postcode">
+            What is the postcode of the property you are registering as a
+            short-term let?
+          </label>
+        </h1>
+        <div id="owner-name-hint" class="govuk-hint">Postcode</div>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="r3-postcode"
+          name="r3-postcode"
+          type="text"
+        />
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What should I do if I have multiple properties with the same
+            address?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          More information will be provided here on what you should do.
+        </div>
+      </details>
+      {{ govukButton({ text: "Save and continue" }) }}
+    </form>
+
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

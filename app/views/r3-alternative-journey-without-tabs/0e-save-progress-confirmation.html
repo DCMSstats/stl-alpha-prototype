@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 1 of 6</p>
+    <h1 class="govuk-heading-l">Your progress is now being saved</h1>
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/1a-operating-model"
+      method="post"
+    >
+      <p class="govuk-body">
+        We have sent a confirmation email to example@stl.co.uk
+      </p>
+
+      {{ govukButton({ text: "Save and continue" }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

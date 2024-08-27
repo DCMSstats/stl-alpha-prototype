@@ -1,0 +1,358 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+<p class="govuk-hint">Section 4 of 6</p>
+</div>
+
+<div class="govuk-grid-row ">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+    {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+  </h1>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-grid-column-two-thirds govuk-!-padding-left-0">Registration number</h2>
+    <p class="govuk-grid-column-one-third"><strong class="govuk-tag govuk-tag--blue">
+      Pending
+    </strong></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-full-width">
+    <form class="form" action="/path/of/next/page" method="post"></form>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#property-details">
+              Property details
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#compliance">
+              Compliance
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#other-info">
+              Other
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#accessibility">
+              Accessibility
+            </a>
+          </li>
+          
+        </ul>
+
+<!-- Property details tab -->
+        <div class="govuk-tabs__panel" id="property-details">
+          <h2 class="govuk-heading-l">Property details summary</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Home Letting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['home-letting'] or "Flat"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-accomodation">Change<span class="govuk-visually-hidden"> accommodation type</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of bedrooms
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['bedrooms-full-dwelling'] or "2"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-bedrooms">Change<span class="govuk-visually-hidden"> bedroom details</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Number of guests allowed
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['bedrooms-full-dwelling'] or "4"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-bedrooms">Change<span class="govuk-visually-hidden"> guest number</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name of management agency
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Hiltonz
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-management-agency">Change<span class="govuk-visually-hidden"> agency name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name of agent
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John Doe
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-management-agency">Change<span class="govuk-visually-hidden"> agent name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Email address for agent
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  johndoe@example.com
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-management-agency">Change<span class="govuk-visually-hidden"> contact email</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact telephone number for agent
+                <dd class="govuk-summary-list__value">
+                  01234 567 891
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-management-agency">Change<span class="govuk-visually-hidden"> contact number</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Correspondence address for agent
+                <dd class="govuk-summary-list__value">
+                  123 Rag Lane, London, SW15 2SR
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9b-management-agency">Change<span class="govuk-visually-hidden"> correspondence address</span></a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+<!-- Compliance tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="compliance">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Compliance Summary</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Gas in the property
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-gas-safety">Change<span class="govuk-visually-hidden"> gas in the property</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Gas safety certificate 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  gsc2024.jpg
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-gas-safety">Change<span class="govuk-visually-hidden"> gas safety upload</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Fire safety regulation met
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-fire-safety">Change<span class="govuk-visually-hidden"> fire safety regulation</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Fire Risk Assessment evidence
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">firerisk2024page1.jpg</p>
+                  <p class="govuk-body">firerisk2024page2.jpg</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-fire-safety">Change<span class="govuk-visually-hidden"> fire risk upload 1</span></a>
+                    </li>
+                
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Furniture Fire safety regulations met 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-furniture-safety">Change<span class="govuk-visually-hidden"> furniture fire safety regulation</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Electrical safety regulations met 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-electrical-safety">Change<span class="govuk-visually-hidden"> electrical safety regulation</span></a>
+                </dd>
+              </div>
+              
+  
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Electrical Installation Condition Report (EICR) 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  esc2024.jpg
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9c-electrical-safety">Change<span class="govuk-visually-hidden"> electrical safety upload</span></a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+ <!-- other-info tab -->
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="other-info">
+          <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Other required information summary</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Nights occupied this year (Jan 2024 - now)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  72
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-other-info">Change<span class="govuk-visually-hidden"> nights occupied this year</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Nights occupied last year (Jan 2023 - Dec 2023) 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  90
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-other-info">Change<span class="govuk-visually-hidden"> nights occupied last year</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Planning permission 
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Not required
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-other-info">Change<span class="govuk-visually-hidden"> planning permission</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Exemptions
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes - 120 days
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-other-info">Change<span class="govuk-visually-hidden"> exemptions</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Exeption documents
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  exemptiondocument.jpg
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-other-info">Change<span class="govuk-visually-hidden"> exemption document</span></a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+ <!-- Accessibility tab -->
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="accessibility">
+          <h2 class="govuk-heading-l">Accessibility summary</h2>
+          <div class="govuk-form-group">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Accessibility features
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Step free access
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9d-accessibility">Change<span class="govuk-visually-hidden"> fire risk upload 1</span></a>
+                    </li>
+                
+                  </ul>
+                </dd>
+              </div> 
+            </dl>
+          </div>
+        </div>
+
+
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
