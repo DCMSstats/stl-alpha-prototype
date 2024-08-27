@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+    <h1 class="govuk-heading-l">
+      Does the short-term rental have gas in the property?
+    </h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9c-fire-safety"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="gas-safety"
+                name="gas-safety"
+                type="radio"
+                value="yes"
+              />
+              <label class="govuk-label govuk-radios__label" for="gas-safety">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="gas-safety-2"
+                name="gas-safety"
+                type="radio"
+                value="no"
+              />
+              <label class="govuk-label govuk-radios__label" for="gas-safety-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >How can I comply with current gas safety regulations for short-term
+            rental accommodation in England?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Information on how you can comply would be shown here.
+        </div>
+      </details>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >I don't have a gas safety certificate, what should I do?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Information on how you can obtain a gas safety certificate would be
+          shown here.
+        </div>
+      </details>
+      <h2 class="govuk-heading-s">Upload your gas safety certificate</h2>
+      <p class="govuk-hint">Each document must be smaller than 20MB.</p>
+      <p class="govuk-hint">
+        You can upload the following file formats jpg, png, pdf, HEIC.
+      </p>
+
+      <div class="govuk-form-group">
+        <div class="govuk-!-margin-bottom-4">
+          <label class="govuk-label" for="gas-upload"
+            >Gas safety certificate</label
+          >
+          <div>
+            <input
+              class="govuk-file-upload govuk-grid-column-two-thirds"
+              id="gas-upload"
+              name="gasUpload"
+              type="file"
+            />
+            <p class="govuk-body govuk-grid-column-one-third">
+              <a
+                href="#"
+                role="button"
+                draggable="false"
+                data-module="govuk-button"
+              >
+                Remove
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-grid-column-two-thirds">
+        {{ govukButton({ text: "Add another document",
+        classes:"govuk-button--secondary", href:"#gasUpload" }) }}
+      </div>
+
+      <div class="govuk-grid-row govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+          {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+          "Return to task list", classes: "govuk-button--secondary", href:
+          "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
+        </div>
+      </div>
+    </form>
+    <div class="govuk-grid-row govuk-grid-column-two-thirds">
+      <p class="govuk-body">
+        <a
+          class="govuk-link"
+          href="/r3-multiple-property-flow/application-saved-confirmation"
+          >Save and come back later</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+    <h1 class="govuk-heading-l">
+      Does the short-term rental comply with the relevant electrical safety
+      standards for this type of accommodation?
+    </h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9c-other-info"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div
+            class="govuk-radios govuk-radios--inline"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="electrical-safety"
+                name="electrical-safety"
+                type="radio"
+                value="yes"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="electrical-safety"
+              >
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="electrical-safety-2"
+                name="electrical-safety"
+                type="radio"
+                value="no"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="electrical-safety-2"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >How can I comply with current electrical safety regulations for
+            short-term rental accommodation in England?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Information on how you can comply would be shown here.
+        </div>
+      </details>
+      <h2 class="govuk-heading-s">
+        Upload your Electrical Installation Condition Report (EICR)
+      </h2>
+      <p class="govuk-hint">Each document must be smaller than 20MB.</p>
+      <p class="govuk-hint">
+        You can upload the following file formats jpg, png, pdf, HEIC.
+      </p>
+
+      <div class="govuk-form-group">
+        <div class="govuk-!-margin-bottom-4">
+          <label class="govuk-label" for="electrical-upload"
+            >Electrical Installation Condition Report (EICR)</label
+          >
+          <div>
+            <input
+              class="govuk-file-upload govuk-grid-column-two-thirds"
+              id="electrical-upload"
+              name="electricalUpload"
+              type="file"
+            />
+            <p class="govuk-body govuk-grid-column-one-third">
+              <a
+                href="#"
+                role="button"
+                draggable="false"
+                data-module="govuk-button"
+              >
+                Remove
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-grid-column-two-thirds">
+        {{ govukButton({ text: "Add another document",
+        classes:"govuk-button--secondary", href:"#electricalUpload" }) }}
+      </div>
+
+      <div class="govuk-grid-row govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+          {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+          "Return to task list", classes: "govuk-button--secondary", href:
+          "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
+        </div>
+      </div>
+    </form>
+    <div class="govuk-grid-row govuk-grid-column-two-thirds">
+      <p class="govuk-body">
+        <a
+          class="govuk-link"
+          href="/r3-multiple-property-flow/application-saved-confirmation"
+          >Save and come back later</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
