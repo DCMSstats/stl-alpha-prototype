@@ -12,7 +12,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       Add your short-term let property address
     </h1>
     <div id="owner-name-hint" class="govuk-hint">
-      You can add multiple addresses
+      You will be able to add multiple addresses
     </div>
     <form
       class="form"
@@ -34,8 +34,20 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           type="text"
         />
       </div>
-      {{ govukButton({ text: "Find address" }) }}
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What should I do if I have multiple properties with the same
+            address?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          More information will be provided here on what you should do.
+        </div>
+      </details>
+      {{ govukButton({ text: "Save and continue" }) }}
     </form>
+
     <p class="govuk-body">
       <a
         class="govuk-link"

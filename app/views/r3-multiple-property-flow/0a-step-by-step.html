@@ -24,8 +24,7 @@ endblock %} {% block content %}
     </p>
     <p class="govuk-body">
       For your security, your application will be reset if you are inactive for
-      more than two hours. If you need to stop at any point, save the
-      application and return to it later.
+      more than two hours.
     </p>
     <p class="govuk-body">
       You can leave this application at any point and your progress will be
@@ -114,7 +113,7 @@ endblock %} {% block content %}
             <ol class="app-step-nav__list" data-length="1">
               <li class="app-step-nav__list-item js-list-item">
                 <p data-position="2.1">
-                  Enter details about the registered owner.
+                  Enter details about the owner of the short-term let property.
                 </p>
                 <p data-position="2.1">
                   Details will include the owner name, date of birth, contact
@@ -158,7 +157,7 @@ endblock %} {% block content %}
             id="step-panel-driving-lessons-and-practice-3"
           >
             <p class="app-step-nav__paragraph">
-              Add one or multiple properties. Fill in their details.
+              Add the addresses of one or multiple properties.
             </p>
           </div>
         </li>
@@ -195,7 +194,7 @@ endblock %} {% block content %}
           >
             <ol class="app-step-nav__list" data-length="3">
               <li class="app-step-nav__list-item js-list-item">
-                <p>Add property details to addresses added.</p>
+                <p>Add property details for the addresses added.</p>
               </li>
             </ol>
           </div>
@@ -222,8 +221,9 @@ endblock %} {% block content %}
             id="step-panel-book-and-manage-your-theory-test-5"
           >
             <p class="app-step-nav__paragraph">
-              You will be asked to upload a gas safety certificate for your
-              properties (if applicable).
+              You will be asked to upload a gas safety certificate and
+              electrical safety certificate for your property or properties (if
+              applicable).
             </p>
             <p class="app-step-nav__paragraph">
               You will also be asked to confirm your property meets the
@@ -262,10 +262,6 @@ endblock %} {% block content %}
             class="app-step-nav__panel js-panel"
             id="step-panel-book-and-manage-your-driving-test-6"
           >
-            <p class="app-step-nav__paragraph">
-              Each application costs £45 per property. You can pay for a single
-              or multiple short-term let properties.
-            </p>
             <p class="app-step-nav__paragraph">
               You can pay by MasterCard, Visa, Electron or Delta debit or credit
               card. Use GOV.UK to pay for your application.
@@ -309,7 +305,7 @@ endblock %} {% block content %}
         </li>
       </ol>
     </div>
-    {{ govukButton({ text: "Continue to declaration",
+    {{ govukButton({ text: "Continue to Declaration",
     href:"/r3-multiple-property-flow/0b-initial-declaration" }) }}
   </div>
 </div>
