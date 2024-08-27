@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Task list template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+  <p class="govuk-hint">Section 4 of 6</p>
+</div>
+
+<!-- <div class="govuk-grid-row">
+  <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+    {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+  </h1>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div> -->
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2
+      class="govuk-heading-m govuk-grid-column-two-thirds govuk-!-padding-left-0"
+    >
+      Registration number
+    </h2>
+    <p class="govuk-grid-column-one-third">
+      <strong class="govuk-tag govuk-tag--blue"> Pending </strong>
+    </p>
+  </div>
+</div> -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
+    </h1>
+
+    <h2 class="govuk-heading-m">Property details</h2>
+
+    {% set completedStatus = { tag: { text: "Completed", classes:
+    "govuk-tag--blue" } } %} {% set incompleteStatus = { tag: { text: "Not
+    started", classes: "govuk-tag--grey" } } %} {# To switch between the
+    completed and incomplete statues, use some inline logic within the component
+    below, like this: "status: (completedStatus if ... else incompleteStatus)"
+    #} {{ govukTaskList({ idPrefix: "property-details-section", items: [ {
+    title: { text: "Accommodation type" }, href:
+    "/r3-alternative-journey-without-tabs/9b-accomodation", status:
+    (incompleteStatus) }, { title: { text: "Bedrooms and guests" }, href:
+    "/r3-alternative-journey-without-tabs/9b-bedrooms", status: incompleteStatus
+    },{ title: { text: "Management agency details" }, href:
+    "/r3-alternative-journey-without-tabs/9b-accomodation", status:
+    incompleteStatus } ] }) }}
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">Compliance</h2>
+
+    {{ govukTaskList({ idPrefix: "compliance-section", items: [ { title: { text:
+    "Gas safety" }, href: "#", status: incompleteStatus }, { title: { text:
+    "Fire safety" }, href: "#", status: incompleteStatus }, { title: { text:
+    "Furniture fire safety" }, href: "#", status: incompleteStatus }, { title: {
+    text: "Electrical Safety" }, href: "#", status: incompleteStatus } ] }) }}
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-5">Other</h2>
+
+    {{ govukTaskList({ idPrefix: "third-section", items: [ { title: { text:
+    "Other required information" }, href: "#", status: incompleteStatus }, {
+    title: { text: "Accessibility" }, href: "#", status: incompleteStatus } ] })
+    }}
+
+    <div class="govuk-!-margin-top-5">
+      {{ govukButton({ text: "Continue to payment", disabled: true }) }}
+    </div>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/9-properties-task-page#list-of-properties"
+        >Add details for another property</a
+      >
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}{{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+
+    <h1 class="govuk-heading-l">Management agency</h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9b-guests"
+      method="post"
+    >
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-hint govuk-!-margin-bottom-4">
+          Please fill in your management agency details (if applicable)
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agency-name"
+            >Name of management agency</label
+          >
+          <input
+            class="govuk-input"
+            id="r3-agency-name"
+            name="r3-agency-details"
+            type="text"
+            value="Hiltonz"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agent-name">Name of agent</label>
+          <input
+            class="govuk-input"
+            id="r3-agent-name"
+            name="r3-agency-details"
+            type="text"
+            value="John Doe"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agency-email"
+            >Contact email address</label
+          >
+          <input
+            class="govuk-input"
+            id="r3-agency-email"
+            name="r3-agency-details"
+            type="email"
+            spellcheck="false"
+            aria-describedby="email-hint"
+            autocomplete="email"
+            value="john.doe@example.com"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agency-telephone"
+            >Contact telephone number</label
+          >
+          <input
+            class="govuk-input"
+            id="r3-agency-telephone-number"
+            name="r3-agency-details"
+            type="tel"
+            autocomplete="tel"
+            value="01234 567891"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agency-address"
+            >Correspondence address</label
+          >
+          <input
+            class="govuk-input"
+            id="r3-agency-address"
+            name="r3-agency-details"
+            type="text"
+            value="123 Rag Lane"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="r3-agency-postcode">Postcode</label>
+          <input
+            class="govuk-input"
+            id="r3-agency-postcode"
+            name="r3-agency-details"
+            type="text"
+            value="SW15 2SR"
+          />
+        </div>
+      </fieldset>
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+        "Return to task list", classes: "govuk-button--secondary" }) }}
+      </div>
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,114 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}{{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}  {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+
+    <h1 class="govuk-heading-l">Type of accommodation</h1>
+
+    <form class="form" action="/r3-alternative-journey-without-tabs/9b-bedrooms" method="post">
+      <fieldset class="govuk-fieldset" aria-describedby="home-letting-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          Home letting
+        </legend>
+        
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-letting" name="home-letting" type="checkbox" value="House">
+            <label class="govuk-label govuk-checkboxes__label" for="home-letting">
+              House
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-letting-2" name="home-letting" type="checkbox" value="Cottage">
+            <label class="govuk-label govuk-checkboxes__label" for="home-letting-2">
+              Cottage
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-letting-3" name="home-letting" type="checkbox" value="Flat">
+            <label class="govuk-label govuk-checkboxes__label" for="home-letting-3">
+              Flat
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-letting-4" name="home-letting" type="checkbox" value="Bungalow">
+            <label class="govuk-label govuk-checkboxes__label" for="home-letting-4">
+              Bungalow
+            </label>
+          </div>
+        </div>
+        <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+         Home sharing
+        </legend>
+        
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-sharing" name="home-sharing" type="checkbox" value="Single room">
+            <label class="govuk-label govuk-checkboxes__label" for="home-sharing">
+              Single room
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="home-sharing-2" name="home-sharing" type="checkbox" value="Converted garage">
+            <label class="govuk-label govuk-checkboxes__label" for="home-sharing-2">
+              Converted garage
+            </label>
+          </div>
+
+          <legend class="govuk-!-margin-top-4 govuk-fieldset__legend govuk-fieldset__legend--m">
+            Other
+           </legend>
+           
+           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+             <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="accommodation-type-other" name="accommodation-type-other" type="checkbox" value="Tree house">
+               <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other">
+                 Tree house
+               </label>
+             </div>
+             <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Gate house">
+               <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                 Gate house
+               </label>
+             </div>
+             <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Farm house">
+              <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                Farm house
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="accommodation-type-other-2" name="accommodation-type-other" type="checkbox" value="Not included in the above">
+              <label class="govuk-label govuk-checkboxes__label" for="accommodation-type-other-2">
+                Not included in the above
+              </label>
+            </div>
+            
+      </fieldset>
+      <div class="govuk-button-group govuk-!-margin-top-4">
+        {{ govukButton({ text: "Save and continue"}) }}
+        {{ govukButton({
+          text: "Return to task list",
+          classes: "govuk-button--secondary"
+        }) }} 
+      </div>
+      
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

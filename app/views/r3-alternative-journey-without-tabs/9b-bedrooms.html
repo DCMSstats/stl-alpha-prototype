@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%}{{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+
+    <h1 class="govuk-heading-l">Bedrooms and guests</h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9b-management-agency"
+      method="post"
+    >
+      <div class="govuk-form-group">
+        <label
+          class="govuk-fieldset__legend govuk-fieldset__legend--m"
+          for="bedrooms-full-dwelling"
+        >
+          How many bedrooms are there in the property?
+        </label>
+        <input
+          class="govuk-input govuk-input--width-2"
+          id="bedrooms-full-dwelling"
+          name="bedrooms-full-dwelling"
+          type="number"
+          autocomplete="bedrooms-full-dwelling"
+        />
+      </div>
+
+      <div class="govuk-form-group">
+        <label
+          class="govuk-fieldset__legend govuk-fieldset__legend--m"
+          for="guests-full-dwelling"
+        >
+          What is the maximum number of guests that the property can accommodate
+          in its current layout?
+        </label>
+        <input
+          class="govuk-input govuk-input--width-2"
+          id="guests-full-dwelling"
+          name="guests-full-dwelling"
+          type="number"
+          autocomplete="guests-full-dwelling"
+        />
+      </div>
+
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+        "Return to task list", classes: "govuk-button--secondary" }) }}
+      </div>
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}
