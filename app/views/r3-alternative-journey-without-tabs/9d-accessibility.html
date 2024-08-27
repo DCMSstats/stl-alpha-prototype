@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+    <h1 class="govuk-heading-l">Does this property meet any accessibility needs?</h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9a-alternative-task-list-completed"
+      method="post"
+    >
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group">
+        <div id="with-hint-hint" class="govuk-hint">
+          For example step free access, wheelchair-accessible bathroom/wet room
+        </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 200 characters
+        </div>
+      </div>
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+        "Return to task list", classes: "govuk-button--secondary", href:
+        "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
+      </div>
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+  
+</div>
+
+{% endblock %}

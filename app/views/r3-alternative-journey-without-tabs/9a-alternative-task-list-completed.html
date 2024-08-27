@@ -24,35 +24,36 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
     #} {{ govukTaskList({ idPrefix: "property-details-section", items: [ {
     title: { text: "Accommodation type" }, href:
     "/r3-alternative-journey-without-tabs/9b-accomodation", status:
-    (incompleteStatus) }, { title: { text: "Bedrooms and guests" }, href:
-    "/r3-alternative-journey-without-tabs/9b-bedrooms", status: incompleteStatus
+    (completedStatus) }, { title: { text: "Bedrooms and guests" }, href:
+    "/r3-alternative-journey-without-tabs/9b-bedrooms", status: completedStatus
     },{ title: { text: "Management agency details" }, href:
     "/r3-alternative-journey-without-tabs/9b-management-agency", status:
-    incompleteStatus } ] }) }}
+    completedStatus } ] }) }}
 
     <h2 class="govuk-heading-m govuk-!-margin-top-5">Compliance</h2>
 
     {{ govukTaskList({ idPrefix: "compliance-section", items: [ { title: { text:
     "Gas safety" }, href: "/r3-alternative-journey-without-tabs/9c-gas-safety",
-    status: incompleteStatus }, { title: { text: "Fire safety" }, href:
+    status: completedStatus }, { title: { text: "Fire safety" }, href:
     "/r3-alternative-journey-without-tabs/9c-fire-safety", status:
-    incompleteStatus }, { title: { text: "Furniture fire safety" }, href:
+    completedStatus }, { title: { text: "Furniture fire safety" }, href:
     "/r3-alternative-journey-without-tabs/9c-furniture-safety", status:
-    incompleteStatus }, { title: { text: "Electrical Safety" }, href:
+    completedStatus }, { title: { text: "Electrical Safety" }, href:
     "/r3-alternative-journey-without-tabs/9c-electrical-safety", status:
-    incompleteStatus } ] }) }}
+    completedStatus } ] }) }}
 
     <h2 class="govuk-heading-m govuk-!-margin-top-5">Other</h2>
 
     {{ govukTaskList({ idPrefix: "third-section", items: [ { title: { text:
     "Other required information" }, href:
     "/r3-alternative-journey-without-tabs/9d-other-info", status:
-    incompleteStatus }, { title: { text: "Accessibility" }, href:
+    completedStatus }, { title: { text: "Accessibility" }, href:
     "/r3-alternative-journey-without-tabs/9d-accessibility", status:
-    incompleteStatus } ] }) }}
+    completedStatus } ] }) }}
 
     <div class="govuk-!-margin-top-5">
-      {{ govukButton({ text: "Continue to payment", disabled: true }) }}
+      {{ govukButton({ text: "Continue to payment",
+      href:"/pay/payment-summary"}) }}
     </div>
     <p class="govuk-body">
       <a

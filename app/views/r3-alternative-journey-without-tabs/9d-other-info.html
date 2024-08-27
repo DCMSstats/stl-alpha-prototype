@@ -1,0 +1,145 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+    <h1 class="govuk-heading-l">Other required information</h1>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/9d-accessibility"
+      method="post"
+    >
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-fieldset__legend--s" for="present-occupation">
+          How many nights has the property been occupied this year (Jan 2024 -now)?
+        </label>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="present-occupation"
+          name="present-occupation"
+          type="text"
+          autocomplete="present-occupation"
+        />
+      </div>
+  
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-fieldset__legend--s" for="previous-occupation">
+          How many nights was the property occupied last year (Jan 2023 - Dec 2023)?
+        </label>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="previous-occupation"
+          name="previous-occupation"
+          type="text"
+          autocomplete="previous-occupation"
+        />
+      </div>
+  
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              If the property is in London, do you have planning permission if it is required?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                This property is not in London
+              </label>
+            </div>
+          </div>
+        </fieldset>
+       
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >What are the planning permission requirements in London?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Details on what the planning permission requirents are will be shown here.
+        </div>
+      </details>
+  
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-fieldset__legend--s" for="exemptions">
+          Does this property have any exemptions? If yes, please note the number of days.
+        </label>
+        <input
+          class="govuk-input govuk-input--width-10"
+          id="exemptions"
+          name="exemptions"
+          type="text"
+          autocomplete="exemptions"
+        />
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >What counts as an exemption?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Details on what counts as an exemption would be shown here.
+        </div>
+      </details>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="data-upload">Upload your proof of exemption</label>
+        <input
+          class="govuk-file-upload"
+          id="data-upload"
+          name="dataUpload"
+          type="file"
+        />
+        
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >What can I upload as proof?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          Details on what can be uploaded as proof would be shown here.
+        </div>
+      </details>
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+        "Return to task list", classes: "govuk-button--secondary", href:
+        "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
+      </div>
+    </form>
+    <p class="govuk-body">
+      <a
+        class="govuk-link"
+        href="/r3-multiple-property-flow/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+  
+</div>
+
+{% endblock %}
