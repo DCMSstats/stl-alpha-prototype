@@ -62,11 +62,13 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           Information on how you can comply would be shown here.
         </div>
       </details>
-      <h2 class="govuk-heading-s">Upload your Fire Risk Assessment evidence</h2>
-      <p class="govuk-hint">Each document must be smaller than 20MB.</p>
-      <p class="govuk-hint">
-        You can upload the following file formats jpg, png, pdf, HEIC.
-      </p>
+      <h2 class="govuk-heading-m">Upload your Fire Risk Assessment evidence</h2>
+      <div class="govuk-inset-text">
+        <p class="govuk-!-margin-bottom-2">
+          Each document must be smaller than 20MB.
+        </p>
+        <p>You can upload the following file formats jpg, png, pdf, HEIC.</p>
+      </div>
 
       <div class="govuk-form-group">
         <div class="govuk-!-margin-bottom-4">
@@ -93,21 +95,18 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           </div>
         </div>
       </div>
-      <div class="govuk-grid-row govuk-grid-column-two-thirds">
-        {{ govukButton({ text: "Add another document",
-        classes:"govuk-button--secondary govuk-!-margin-bottom-9",
-        href:"#fireUpload" }) }}
-      </div>
 
       <div class="govuk-grid-row govuk-grid-column-two-thirds">
-        <div class="govuk-button-group">
+        <div class="govuk-button-group govuk-!-margin-top-4">
           {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
           "Return to task list", classes: "govuk-button--secondary", href:
           "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
         </div>
       </div>
     </form>
-    <div class="govuk-grid-row govuk-grid-column-two-thirds">
+    <div
+      class="govuk-grid-row govuk-grid-column-two-thirds govuk-!-margin-top-4"
+    >
       <p class="govuk-body">
         <a
           class="govuk-link"
