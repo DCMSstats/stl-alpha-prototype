@@ -8,15 +8,16 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-hint">Section 4 of 6</p>
-    <h1 class="govuk-heading-l">Other required information</h1>
+    
 
     <form
       class="form"
       action="/r3-alternative-journey-without-tabs/9d-accessibility"
       method="post"
     >
+    <h1 class="govuk-heading-l">Other required information</h1>
     <fieldset class="govuk-fieldset">
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-8">
         <label class="govuk-label govuk-fieldset__legend--s" for="present-occupation">
           How many nights has the property been occupied this year (Jan 2024 -now)?
         </label>
@@ -29,7 +30,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         />
       </div>
   
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-8">
         <label class="govuk-label govuk-fieldset__legend--s" for="previous-occupation">
           How many nights was the property occupied last year (Jan 2023 - Dec 2023)?
         </label>
@@ -72,7 +73,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </fieldset>
        
       </div>
-      <details class="govuk-details">
+      <details class="govuk-details govuk-!-margin-bottom-8">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text"
             >What are the planning permission requirements in London?</span
@@ -83,55 +84,14 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </div>
       </details>
   
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-fieldset__legend--s" for="exemptions">
-          Does this property have any exemptions? If yes, please note the number of days.
-        </label>
-        <input
-          class="govuk-input govuk-input--width-10"
-          id="exemptions"
-          name="exemptions"
-          type="text"
-          autocomplete="exemptions"
-        />
-      </div>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text"
-            >What counts as an exemption?</span
-          >
-        </summary>
-        <div class="govuk-details__text">
-          Details on what counts as an exemption would be shown here.
-        </div>
-      </details>
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--s" for="data-upload">Upload your proof of exemption</label>
-        <input
-          class="govuk-file-upload"
-          id="data-upload"
-          name="dataUpload"
-          type="file"
-        />
-        
-      </div>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text"
-            >What can I upload as proof?</span
-          >
-        </summary>
-        <div class="govuk-details__text">
-          Details on what can be uploaded as proof would be shown here.
-        </div>
-      </details>
-      <div class="govuk-button-group">
+     
+      <div class="govuk-button-group govuk-!-margin-top-4">
         {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
         "Return to task list", classes: "govuk-button--secondary", href:
         "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
       </div>
     </form>
-    <p class="govuk-body">
+    <p class="govuk-body govuk-!-margin-top-6">
       <a
         class="govuk-link"
         href="/r3-alternative-journey-without-tabs/application-saved-confirmation"

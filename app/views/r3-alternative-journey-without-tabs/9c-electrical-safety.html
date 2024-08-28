@@ -68,16 +68,18 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           Information on how you can comply would be shown here.
         </div>
       </details>
-      <h2 class="govuk-heading-s">
+      <h2 class="govuk-heading-m">
         Upload your Electrical Installation Condition Report (EICR)
       </h2>
-      <p class="govuk-hint">Each document must be smaller than 20MB.</p>
-      <p class="govuk-hint">
-        You can upload the following file formats jpg, png, pdf, HEIC.
-      </p>
+      <div class="govuk-inset-text">
+        <p class="govuk-!-margin-bottom-2">
+          Each document must be smaller than 20MB.
+        </p>
+        <p>You can upload the following file formats jpg, png, pdf, HEIC.</p>
+      </div>
 
-      <div class="govuk-form-group">
-        <div class="govuk-!-margin-bottom-4">
+      <div class="govuk-form-group govuk-!-margin-bottom-8">
+        <div>
           <label class="govuk-label" for="electrical-upload"
             >Electrical Installation Condition Report (EICR)</label
           >
@@ -101,11 +103,6 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           </div>
         </div>
       </div>
-      <div class="govuk-grid-row govuk-grid-column-two-thirds">
-        {{ govukButton({ text: "Add another document",
-        classes:"govuk-button--secondary govuk-!-margin-bottom-9",
-        href:"#electricalUpload" }) }}
-      </div>
 
       <div class="govuk-grid-row govuk-grid-column-two-thirds">
         <div class="govuk-button-group">
@@ -115,7 +112,9 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </div>
       </div>
     </form>
-    <div class="govuk-grid-row govuk-grid-column-two-thirds">
+    <div
+      class="govuk-grid-row govuk-grid-column-two-thirds govuk-!-margin-top-4"
+    >
       <p class="govuk-body">
         <a
           class="govuk-link"
