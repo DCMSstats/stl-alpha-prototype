@@ -8,24 +8,29 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-hint">Section 3 of 6</p>
-    <h1 class="govuk-heading-l">Add a short-term let property address</h1>
-    <div id="owner-name-hint" class="govuk-hint">
-      You will be able to add multiple addresses
-    </div>
+
     <form
       class="form"
       action="/r3-alternative-journey-without-tabs/8-addresses-summary"
       method="post"
     >
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+        Add a short-term let property address
+      </h1>
+      <div id="owner-name-hint" class="govuk-hint">
+        You will be able to add multiple addresses
+      </div>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <h2 class="govuk-heading-m">Select your property</h2>
+          <h2 class="govuk-heading-m govuk-!-padding-top-4">
+            Select your property
+          </h2>
 
           <h3 class="govuk-body govuk-!-margin-0">Postcode</h3>
           <p class="govuk-body">
             <strong>{{data['r3-postcode'] or "SW13 4AE"}}</strong>
           </p>
-          <div class="govuk-form-group">
+          <div class="govuk-form-group govuk-!-margin-bottom-4">
             <label class="govuk-label" for="r3-whereDoYouLive2">
               Select an address
             </label>
@@ -54,9 +59,10 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </fieldset>
       </div>
 
-      {{ govukButton({ text: "Continue" }) }}
+      {{ govukButton({ text: "Save and continue",
+      classes:"govuk-!-margin-bottom-4" }) }}
     </form>
-    <p class="govuk-body">
+    <p class="govuk-body govuk-!-padding-bottom-4">
       <a href="#" class="govuk-link">I can't find the address on the list</a>
     </p>
     <p class="govuk-body">

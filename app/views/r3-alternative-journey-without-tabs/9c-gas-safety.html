@@ -8,15 +8,15 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-hint">Section 4 of 6</p>
-    <h1 class="govuk-heading-l">
-      Does the short-term rental have gas in the property?
-    </h1>
 
     <form
       class="form"
       action="/r3-alternative-journey-without-tabs/9c-fire-safety"
       method="post"
     >
+      <h1 class="govuk-heading-l">
+        Does the short-term rental have gas in the property?
+      </h1>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
@@ -58,7 +58,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
           Information on how you can comply would be shown here.
         </div>
       </details>
-      <details class="govuk-details">
+      <details class="govuk-details govuk-!-margin-bottom-8">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text"
             >I don't have a gas safety certificate, what should I do?</span
@@ -102,7 +102,8 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       </div>
       <div class="govuk-grid-row govuk-grid-column-two-thirds">
         {{ govukButton({ text: "Add another document",
-        classes:"govuk-button--secondary", href:"#gasUpload" }) }}
+        classes:"govuk-button--secondary govuk-!-margin-bottom-9",
+        href:"#gasUpload" }) }}
       </div>
 
       <div class="govuk-grid-row govuk-grid-column-two-thirds">

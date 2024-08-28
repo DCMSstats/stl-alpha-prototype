@@ -30,7 +30,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         <strong>{{data['r3-postcode'] or "BG13 1HN"}}</strong>
       </p>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-8">
         <label class="govuk-label" for="r3-whereDoYouLive">
           Select an address
         </label>
@@ -57,7 +57,8 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </select>
       </div>
 
-      {{ govukButton({ text: "Continue", classes:"govuk-!-margin-bottom-4" }) }}
+      {{ govukButton({ text: "Save and continue",
+      classes:"govuk-!-margin-bottom-4" }) }}
     </form>
     <p class="govuk-body govuk-!-padding-bottom-4">
       <a href="#" class="govuk-link">I cannot find my address on the list</a>
