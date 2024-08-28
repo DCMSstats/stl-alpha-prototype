@@ -8,13 +8,21 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-hint">Section 2 of 6</p>
-    <h1 class="govuk-heading-l">Add your current home address</h1>
+    <!-- <h1 class="govuk-heading-l">Add your current home address</h1> -->
 
     <form
       class="form"
       action="/r3-alternative-journey-without-tabs/6-address-confirmation"
       method="post"
     >
+      <h1 class="govuk-label-wrapper">
+        <label
+          class="govuk-label govuk-label--l govuk-!-padding-bottom-4"
+          for="address-selection"
+        >
+          Add your current home address
+        </label>
+      </h1>
       <h2 class="govuk-heading-m">Select your property</h2>
 
       <h3 class="govuk-body govuk-!-margin-0">Postcode</h3>
@@ -49,9 +57,9 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
         </select>
       </div>
 
-      {{ govukButton({ text: "Continue" }) }}
+      {{ govukButton({ text: "Continue", classes:"govuk-!-margin-bottom-4" }) }}
     </form>
-    <p class="govuk-body">
+    <p class="govuk-body govuk-!-padding-bottom-4">
       <a href="#" class="govuk-link">I cannot find my address on the list</a>
     </p>
     <p class="govuk-body">

@@ -7,14 +7,15 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-hint">Section 2 of 6</p>
-    <h1 class="govuk-heading-l">
-      Is the address of the short-term rental property the same as your current
-      home address?
-    </h1>
-    <div class="govuk-inset-text">
-      {{ data['r3-whereDoYouLive'] or "2 Logg Way, Birmingham, BG13 1HN"}}
-    </div>
+
     <form class="form" action="/r3-different-address-v2" method="post">
+      <h1 class="govuk-heading-l">
+        Is the address of the short-term rental property the same as your
+        current home address?
+      </h1>
+      <div class="govuk-inset-text">
+        {{ data['r3-whereDoYouLive'] or "2 Logg Way, Birmingham, BG13 1HN"}}
+      </div>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
