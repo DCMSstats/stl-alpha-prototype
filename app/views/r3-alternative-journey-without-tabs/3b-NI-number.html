@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 2 of 6</p>
+
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/4-postcode-lookup"
+      method="post"
+    >
+      <h1 class="govuk-heading-l">Enter your National Insurance Number</h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="national-insurance-number">
+          National Insurance number
+        </label>
+        <div id="national-insurance-number-hint" class="govuk-hint">
+          It’s on your National Insurance card, benefit letter, payslip or P60.
+          For example, ‘QQ 12 34 56 C’.
+        </div>
+        <input
+          class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing"
+          id="national-insurance-number"
+          name="nationalInsuranceNumber"
+          type="text"
+          spellcheck="false"
+          aria-describedby="national-insurance-number-hint"
+        />
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Why do we need this information?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          More information will be provided here on why we require this
+          information.
+        </div>
+      </details>
+
+      {{ govukButton({ text: "Save and continue" }) }}
+    </form>
+    <p class="govuk-body govuk-!-margin-top-4">
+      <a
+        class="govuk-link"
+        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+        >Save and come back later</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}
