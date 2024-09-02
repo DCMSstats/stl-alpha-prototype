@@ -15,13 +15,7 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
     {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13 4AE"}}
   </h1>
   <div class="govuk-grid-column-one-third">
-    <p class="govuk-body">
-      <a
-        class="govuk-link"
-        href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
-        >Save and come back later</a
-      >
-    </p>
+    
   </div>
 </div>
 
@@ -335,8 +329,18 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
     {{ govukButton({ text: "Continue to payment",
     href:"/pay/payment-summary"})
     }}
-    <a class="govuk-link" href="/r3-alternative-journey-without-tabs/9a-alternative-task-list-completed">Return to summary list</a>
+    {{ govukButton({ text: "Return to property list",
+    href:"/r3-alternative-journey-without-tabs/9-property-task-page#list-of-properties",
+  classes:"govuk-button--secondary"})
+    }}
   </div>
+  <p class="govuk-body govuk-!-margin-top-4">
+    <a
+      class="govuk-link"
+      href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+      >Save and come back later</a
+    >
+  </p>
 </div>
 
 {% endblock %}
