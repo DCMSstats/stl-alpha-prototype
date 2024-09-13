@@ -13,11 +13,49 @@ your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
       action="/r3-alternative-journey-without-tabs/9c-gas-safety"
       method="post"
     >
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Management agency</h1>
+      <h1 class="govuk-heading-l">Is the property managed by an agency?</h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="management-agency"
+                name="management-agency"
+                type="radio"
+                value="yes"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="management-agency"
+              >
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="management-agency-2"
+                name="management-agency"
+                type="radio"
+                value="no"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="management-agency-2"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
       <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
-        <legend class="govuk-hint govuk-!-margin-bottom-6">
-          Please fill in your management agency details (if applicable)
+        <legend class="govuk-heading-m govuk-!-margin-bottom-6">
+          If yes, fill in the details of your management agency. If no, leave
+          this section blank
         </legend>
         <div class="govuk-form-group">
           <label class="govuk-label" for="r3-agency-name"
