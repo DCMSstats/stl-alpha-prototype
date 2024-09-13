@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit{% endblock %} {% block beforeContent %}
+{{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"})
+}} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 5 of 6</p>
+    <h1 class="govuk-heading-l">Confirm your payment</h1>
+    <form class="form" action="/pay/payment-successful" method="post">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">List of properties</th>
+            <th scope="col" class="govuk-table__header">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              123 Hill Lane, London, SW13 4AE
+            </th>
+            <td class="govuk-table__cell">£45</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              124 Hill Lane, London, SW13 4AE
+            </th>
+            <td class="govuk-table__cell">£45</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total amount</th>
+            <td class="govuk-table__cell"><strong>£90</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <dl class="govuk-summary-list">
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">
+          Card details summary
+        </h2>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Card number:</dt>
+          <dd class="govuk-summary-list__value">************5556</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Expiry date:</dt>
+          <dd class="govuk-summary-list__value">10/25</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Name on card:</dt>
+          <dd class="govuk-summary-list__value">Sarah Philips</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Billing address:</dt>
+          <dd class="govuk-summary-list__value">
+            2 Logg way, Birmingham, BG13 1HN
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Confirmation email:</dt>
+          <dd class="govuk-summary-list__value">sarahphilips@example.com</dd>
+        </div>
+      </dl>
+      <div class="govuk-button-group govuk-!-margin-top-8">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm payment
+        </button>
+        <a class="govuk-link" href="#">Cancel payment</a>
+      </div>
+    </form>
+  </div>
+  {% endblock %}
+</div>

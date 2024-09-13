@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({"text": "Back", "href":
+"javascript:window.history.back()"}) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 5 of 6</p>
+    <h1 class="govuk-heading-l govuk-!-padding-top-0">Payment Summary</h1>
+    <p class="govuk-body">
+      You are making payment for the following properties:
+    </p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">List of properties</th>
+          <th scope="col" class="govuk-table__header">Amount</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            123 Hill Lane, London, SW13 4AE
+          </th>
+          <td class="govuk-table__cell">£45</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            124 Hill Lane, London, SW13 4AE
+          </th>
+          <td class="govuk-table__cell">£45</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Total amount</th>
+          <td class="govuk-table__cell"><strong>£90</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <form
+      class="form"
+      action="/r3-alternative-journey-without-tabs/13-payment-check-your-details"
+      method="post"
+    >
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading govuk-!-margin-top-4">
+            Enter card details
+          </h1>
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="card-number">Card number</label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="card-number"
+            name="payment-details"
+            type="text"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="expiry">Expiry date</label>
+          <input
+            class="govuk-input govuk-input--width-2"
+            id="expiry"
+            name="payment-details"
+            type="text"
+            autocomplete="address-line2"
+          />
+          <input
+            class="govuk-input govuk-input--width-2"
+            id="expiry-2"
+            name="payment-details"
+            type="text"
+            autocomplete="expiry-2"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">Name on card</label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="card-name"
+            name="payment-details"
+            type="text"
+            autocomplete="card-name"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">Security code</label>
+          <input
+            class="govuk-input govuk-input--width-4"
+            id="security-code"
+            name="payment-details"
+            type="text"
+          />
+        </div>
+      </fieldset>
+      <div class="govuk-button-group govuk-!-margin-top-4">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

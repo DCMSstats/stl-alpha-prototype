@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    Question page template –
+    {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent
+    %}
+    {{ govukBackLink({"text": "Back", "href": "javascript:window.history.back()"}) 
+    }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-hint">Section 5 of 6</p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            Please be aware that the registration of the property or properties will only be finalised once the payments have been completed.
+          </p>
+        </div>
+      </div>
+      <form
+        class="form"
+        action="/r3-alternative-journey-without-tabs/12-payment-summary"
+        method="post"
+      >
+  
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
+                Select the property or properties you would like to pay for
+            </h1>
+          </legend>
+          
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                123 Hill Lane, London, SW13 4AE
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item govuk-!-margin-bottom-6">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                124 Hill Lane, London, SW13 4AE
+              </label>
+            </div>
+            
+          </div>
+        </fieldset>
+      </div>
+          <div class="govuk-button-group">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Continue to payment summary
+            </button>
+            <a class="govuk-link" href="#">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
