@@ -10,16 +10,119 @@
       action="/r3-alternative-journey-without-tabs/1b-owner-details"
       method="post"
     >
-      {% from "govuk/components/radios/macro.njk" import govukRadios %} {{
+      <!-- {% from "govuk/components/radios/macro.njk" import govukRadios %} {{
       govukRadios({ name: "operating-model", fieldset: { legend: { text: "How
       are you operating the short-term let?", isPageHeading: true, classes:
       "govuk-fieldset__legend--l" } }, items: [ { value: "As an individual owner
-      and operator", text: "As an individual owner and operator" }, { value: "As
-      an owner and operator of multiple properties", text: "As an owner and
-      operator of multiple properties" }, { value: "As a management agency",
-      text: "As a management agency" }, { value: "As a combination of the
-      above", text: "As a combination of the above" } ] }) }} {{
-      govukButton({"text": "Save and continue"}) }}
+      and operator", text: "As an individual owner and operator", hint: { text:
+      "[hint text]" } }, { value: "As an owner and operator of multiple
+      properties", text: "As an owner and operator of multiple properties",
+      hint: { text: "[hint text]" } }, { value: "As a management agency", text:
+      "As a management agency", hint: { text: "[hint text]" } }, { value: "As a
+      combination of the above", text: "As a combination of the above", hint: {
+      text: "[hint text]" } } ] }) }} {{ govukButton({"text": "Save and
+      continue"}) }} -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How are you operating the short-term let?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="signIn"
+                name="signIn"
+                type="radio"
+                value="government-gateway"
+                aria-describedby="signIn-item-hint"
+              />
+              <label class="govuk-label govuk-radios__label" for="signIn">
+                As an individual owner and operator
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                [hint text]
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="signIn-2"
+                name="signIn"
+                type="radio"
+                value="govuk-one-login"
+                aria-describedby="signIn-2-item-hint"
+              />
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                As an owner and operator of multiple properties
+              </label>
+              <div
+                id="signIn-2-item-hint"
+                class="govuk-hint govuk-radios__hint"
+              >
+                [hint text]
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="signIn-2"
+                name="signIn"
+                type="radio"
+                value="govuk-one-login"
+                aria-describedby="signIn-2-item-hint"
+              />
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                As a management agency
+              </label>
+              <div
+                id="signIn-2-item-hint"
+                class="govuk-hint govuk-radios__hint"
+              >
+                [hint text]
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="signIn-2"
+                name="signIn"
+                type="radio"
+                value="govuk-one-login"
+                aria-describedby="signIn-2-item-hint"
+              />
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                As a combination of the above
+              </label>
+              <div
+                id="signIn-2-item-hint"
+                class="govuk-hint govuk-radios__hint"
+              >
+                [hint text]
+              </div>
+            </div>
+            <div class="govuk-inset-text">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                  Please specify
+                </label>
+                <textarea
+                  class="govuk-textarea"
+                  id="more-detail"
+                  name="moreDetail"
+                  rows="5"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </div>
     </form>
   </div>
 </div>
