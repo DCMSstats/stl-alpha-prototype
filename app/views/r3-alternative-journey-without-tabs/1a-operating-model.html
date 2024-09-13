@@ -75,38 +75,36 @@
             <div class="govuk-radios__item">
               <input
                 class="govuk-radios__input"
-                id="signIn-2"
-                name="signIn"
+                id="contact-2"
+                name="contact"
                 type="radio"
-                value="govuk-one-login"
-                aria-describedby="signIn-2-item-hint"
+                value="phone"
+                data-aria-controls="conditional-contact-2"
               />
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
                 As a combination of the above
               </label>
-              <div
-                id="signIn-2-item-hint"
-                class="govuk-hint govuk-radios__hint"
-              >
-                [hint text]
-              </div>
             </div>
-            <div class="govuk-inset-text">
+            <div
+              class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-contact-2"
+            >
               <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
+                <label class="govuk-label" for="contact-by-phone">
                   Please specify
                 </label>
-                <textarea
-                  class="govuk-textarea"
-                  id="more-detail"
-                  name="moreDetail"
-                  rows="5"
-                ></textarea>
+                <input
+                  class="govuk-input govuk-!-width-one-third"
+                  id="contact-by-phone"
+                  name="contactByPhone"
+                  type="tel"
+                  autocomplete="tel"
+                />
               </div>
             </div>
-          </div>
+            
         </fieldset>
-        <button type="submit" class="govuk-button" data-module="govuk-button">
+        <button type="submit" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
           Save and continue
         </button>
       </div>
