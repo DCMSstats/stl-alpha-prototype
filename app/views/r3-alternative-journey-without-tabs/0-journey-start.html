@@ -91,15 +91,16 @@ endblock %} {% block content %}
     <p class="govuk-body">
       You can pay by MasterCard, Visa, Electron or Delta debit or credit card.
     </p>
-    <h2 class="govuk-heading-m">How long it takes</h2>
+    <!-- <h2 class="govuk-heading-m">How long it takes</h2>
     <p class="govuk-body">
       You’ll usually get a response within 5 weeks from submission.
-    </p>
-    <p class="govuk-body">
+    </p> -->
+    <p class="govuk-body govuk-!-margin-top-7">
       You can <a href="#">save and return to your application</a> at a later
       date if you need to.
     </p>
-    {{ govukButton({"text": "Start registration now", "href":
+    {{ govukButton({"text": "Start registration now",
+    "classes":"govuk-!-margin-top-6", "href":
     "/r3-alternative-journey-without-tabs/0a-step-by-step", "isStartButton":
     true}) }}
   </div>
