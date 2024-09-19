@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Check your answers
+template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
+beforeContent %} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a
+new service - your <a class="govuk-link" href="#">feedback </a> will help us
+improve it.' }) }} {{ govukBackLink({ text: "Back", href:
+"javascript:window.history.back()" }) }} {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-l">Update your registration</h1>
+
+    <form
+      action="/r3-multiple-property-flow/9-properties-task-page#list-of-properties"
+      method="post"
+      novalidate
+    >
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+            Property 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+              {{ data['r3-whereDoYouLive'] or "123 Hill Lane, London, SW13
+              4AE"}}
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#"
+                  >Change<span class="govuk-visually-hidden"> address</span></a
+                >
+              </li>
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#"
+                  >Remove<span class="govuk-visually-hidden"> address</span></a
+                >
+              </li>
+            </ul>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+            Property 2
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+              {{ data['r3-whereDoYouLive2'] or "124 Hill Lane, London, SW13
+              4AE"}}
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#"
+                  >Change<span class="govuk-visually-hidden"> address</span></a
+                >
+              </li>
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#"
+                  >Remove<span class="govuk-visually-hidden"> address</span></a
+                >
+              </li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Register another property</a>
+      </p>
+      <p class="govuk-body">
+        <a class="govuk-link" href="#">Update my personal information</a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}
