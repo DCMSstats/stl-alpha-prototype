@@ -1,29 +1,24 @@
-Setup to run the kit
-====================
+# Short-term Lets Prototype
 
-To run the kit, you will need:
+This is a prototype of the Short-term lets service which is being developed by the DCMS Visitor Economy Team.
+
+The project is currently in an alpha stage so designs here are likely to change before the service is live, and are currently being used for user research.
+
+# How to use and run this prototype
+
+You will need:
+
 - A code editor (like VSCode)
 - Node.js (The kit is designed to work with Node.js version 20 and above.)
 - To have cloned this repository and saved it in a folder on your local machine.
 
-How to run the kit
-==================
-
-You'll use the terminal to start and stop the kit.
-
-Open the prototype folder in terminal
--------------------------------------
-
-If you're following the guide to getting started you'll already have the terminal open in the right folder.
-
-If you're coming back to work on a prototype, you'll need to navigate to the folder:
-
-`cd ~/Documents/prototypes/stl-alpha-prototype`
-
-Run the kit
------------
+## View the site and edit locally
 
 In the terminal, enter:
+
+`git clone git@github.com:DCMSstats/stl-alpha-prototype.git`
+
+`cd ~/Documents/prototypes/stl-alpha-prototype`
 
 `npm run dev`
 
@@ -31,13 +26,12 @@ The first time you run `npm run dev`, the kit will ask you whether you want to 
 
 In your web browser, go to [open http://localhost:3000 (opens in a new tab).](http://localhost:3000/)
 
-Screenshot of what your prototype homepage should look like:
-
-![Heading GOV.UK Prototype Kit, link Manage your prototype, Heading Service name goes here, text Change your service name in the file app/config.json](https://prototype-kit.service.gov.uk/public/docs/v13/images/docs/prototype-kit-homepage.png)
-
-Quitting the kit
-----------------
-
-It's fine to leave the kit running for days or while your computer is asleep.
-
 To quit the kit, in the terminal press the `ctrl` and `c` keys together.
+
+## View the site which is deployed on Heroku
+
+The prototype kit is password protected to ensure it is not mistaken for a live government service and can be accessed via the following credentials:
+
+https://stl-prototype-75f49d8df937.herokuapp.com/manage-prototype/password?returnURL=%2F
+
+Contact a member of the team for a password if required.
