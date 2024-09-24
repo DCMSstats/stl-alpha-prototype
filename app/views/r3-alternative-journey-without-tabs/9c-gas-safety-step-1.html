@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "Alpha" }, html: 'This is a new service -
+your <a class="govuk-link" href="#">feedback </a> will help us improve it.' })
+}}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-hint">Section 4 of 6</p>
+
+    <form class="form" action="/gas-safety" method="post">
+      <h1 class="govuk-heading-l">
+        Does the short-term let have gas in the property?
+      </h1>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="gas-safety-step-1"
+                name="gas-safety-step-1"
+                type="radio"
+                value="yes"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="gas-safety-step-1"
+              >
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="gas-safety-2"
+                name="gas-safety-step-1"
+                type="radio"
+                value="no"
+              />
+              <label class="govuk-label govuk-radios__label" for="gas-safety-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-button-group govuk-!-margin-top-4">
+          {{ govukButton({ text: "Save and continue"}) }} {{ govukButton({ text:
+          "Return to property tasks", classes: "govuk-button--secondary", href:
+          "/r3-alternative-journey-without-tabs/9a-alternative-task-list" }) }}
+        </div>
+      </div>
+    </form>
+    <div class="govuk-grid-row">
+      <p class="govuk-body govuk-!-margin-top-4">
+        <a
+          class="govuk-link"
+          href="/r3-alternative-journey-without-tabs/application-saved-confirmation"
+          >Save and come back later</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -56,3 +56,12 @@ router.post("/r3-different-address-v2", function (request, response) {
     );
   }
 });
+
+router.post("/gas-safety", function (request, response) {
+  var gas_in_property = request.session.data["gas-safety-step-1"];
+  if (gas_in_property == "yes") {
+    response.redirect("/r3-alternative-journey-without-tabs/9c-gas-safety");
+  } else {
+    response.redirect("/r3-alternative-journey-without-tabs/9c-fire-safety");
+  }
+});
