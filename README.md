@@ -18,7 +18,7 @@ In the terminal, enter:
 
 `git clone git@github.com:DCMSstats/stl-alpha-prototype.git`
 
-`cd ~/Documents/prototypes/stl-alpha-prototype`
+`cd stl-alpha-prototype`
 
 `npm run dev`
 
